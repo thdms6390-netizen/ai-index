@@ -509,6 +509,11 @@
     .detail-head .summary{flex-wrap:wrap}
     .detail-cards{grid-template-columns:1fr;gap:12px}
   }
+  /* 카테고리 상세 진입 시 KPI/페이지 헤드 숨김 (전역) */
+  body.cat-detail .kpis{display:none}
+  body.cat-detail .page-head{display:none}
+  body.cat-detail .section-title{display:none}
+
   @media (max-width:880px){
     .app{grid-template-columns:1fr}
     .sidebar{position:relative;height:auto;border-right:none;border-bottom:1px solid var(--line)}
@@ -520,10 +525,6 @@
     .page-head{flex-direction:column;align-items:flex-start;gap:14px}
     .page-head p{white-space:normal;overflow:visible;text-overflow:initial}
     .detail-head .lede{white-space:normal;overflow:visible;text-overflow:initial}
-    /* 모바일에서 카테고리 상세 진입 시 KPI/페이지 헤드 숨김 */
-    body.cat-detail .kpis{display:none}
-    body.cat-detail .page-head{display:none}
-    body.cat-detail .section-title{display:none}
   }
   @media (max-width:680px){
     .compare-table th,.compare-table td{padding:9px 11px;font-size:11.5px}
