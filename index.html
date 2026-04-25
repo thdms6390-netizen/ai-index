@@ -1275,7 +1275,7 @@ function buildNav(){
     b.className = 'nav-item';
     b.dataset.cat = i;
     b.style.setProperty('--cc', `var(${C[i]})`);
-    b.innerHTML = `<span class="dot"></span><span>${c.kr}</span><span class="count">3</span>`;
+    b.innerHTML = `<span class="dot"></span><span>${c.kr}</span>`;
     b.addEventListener('click',()=>applyFilter(i));
     navCats.appendChild(b);
   });
