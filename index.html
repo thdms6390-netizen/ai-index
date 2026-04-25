@@ -1618,12 +1618,17 @@ $('#search').addEventListener('input',(e)=>{
     tr.style.display = txt.includes(q) ? '' : 'none';
   });
 
-  // sync sidebar highlight: if exactly one panel visible, highlight that category
-  if(!q || visiblePanels.length !== 1){
+  // sync sidebar highlight
+  if(!q){
+    // 빈 검색: 전체 활성
     $$('.nav-item').forEach(b=>b.classList.toggle('active', b.dataset.cat === 'all'));
-  } else {
+  } else if(visiblePanels.length === 1){
+    // 정확히 1개 매칭: 그 카테고리 활성
     const catIdx = visiblePanels[0].dataset.cat;
     $$('.nav-item').forEach(b=>b.classList.toggle('active', String(b.dataset.cat) === String(catIdx)));
+  } else {
+    // 0개 또는 다중 매칭: 아무것도 활성 X
+    $$('.nav-item').forEach(b=>b.classList.remove('active'));
   }
 });
 
