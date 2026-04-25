@@ -1604,16 +1604,27 @@ $$('#segRegion button').forEach(b=>b.addEventListener('click',()=>{
 // ----- search -----
 $('#search').addEventListener('input',(e)=>{
   const q = e.target.value.trim().toLowerCase();
+  const visiblePanels = [];
   $$('#grid .panel').forEach(p=>{
     if(!q){p.style.display='';return}
     const txt = p.textContent.toLowerCase();
-    p.style.display = txt.includes(q) ? '' : 'none';
+    const match = txt.includes(q);
+    p.style.display = match ? '' : 'none';
+    if(match) visiblePanels.push(p);
   });
   $$('#lbTable tbody tr').forEach(tr=>{
     if(!q){tr.style.display='';return}
     const txt = tr.textContent.toLowerCase();
     tr.style.display = txt.includes(q) ? '' : 'none';
   });
+
+  // sync sidebar highlight: if exactly one panel visible, highlight that category
+  if(!q || visiblePanels.length !== 1){
+    $$('.nav-item').forEach(b=>b.classList.toggle('active', b.dataset.cat === 'all'));
+  } else {
+    const catIdx = visiblePanels[0].dataset.cat;
+    $$('.nav-item').forEach(b=>b.classList.toggle('active', String(b.dataset.cat) === String(catIdx)));
+  }
 });
 
 
