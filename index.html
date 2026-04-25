@@ -520,6 +520,10 @@
     .page-head{flex-direction:column;align-items:flex-start;gap:14px}
     .page-head p{white-space:normal;overflow:visible;text-overflow:initial}
     .detail-head .lede{white-space:normal;overflow:visible;text-overflow:initial}
+    /* 모바일에서 카테고리 상세 진입 시 KPI/페이지 헤드 숨김 */
+    body.cat-detail .kpis{display:none}
+    body.cat-detail .page-head{display:none}
+    body.cat-detail .section-title{display:none}
   }
   @media (max-width:680px){
     .compare-table th,.compare-table td{padding:9px 11px;font-size:11.5px}
@@ -548,7 +552,7 @@
       <button class="nav-item active" data-cat="all">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
         <span>전체 카테고리</span>
-        <span class="count">48</span>
+        <span class="count">16</span>
       </button>
     </div>
 
@@ -1329,7 +1333,6 @@ function buildGrid(){
     panel.addEventListener('click',(e)=>{
       if(e.target.closest('.row')) return;
       applyFilter(i);
-      window.scrollTo({top:0,behavior:'smooth'});
     });
 
     grid.appendChild(panel);
@@ -1562,9 +1565,11 @@ function applyFilter(cat, fromHistory){
   // crumb
   $('#crumbCat').textContent = cat==='all' ? '전체' : DATA[cat].kr;
 
+  // body class for mobile-only KPI hide
+  document.body.classList.toggle('cat-detail', cat !== 'all');
+
   // browser history (for back/forward)
   if(!fromHistory){
-    const hash = cat==='all' ? ' ' : `#cat=${cat}`;
     if(location.hash !== (cat==='all' ? '' : `#cat=${cat}`)){
       if(cat==='all'){
         history.pushState({cat:'all'}, '', location.pathname + location.search);
@@ -1572,6 +1577,18 @@ function applyFilter(cat, fromHistory){
         history.pushState({cat}, '', `#cat=${cat}`);
       }
     }
+
+    // scroll behavior
+    const isMobile = window.matchMedia('(max-width:880px)').matches;
+    requestAnimationFrame(()=>{
+      if(cat === 'all'){
+        window.scrollTo({top:0, behavior:'smooth'});
+      } else if(isMobile){
+        $('#detailView')?.scrollIntoView({behavior:'smooth', block:'start'});
+      } else {
+        window.scrollTo({top:0, behavior:'smooth'});
+      }
+    });
   }
 }
 
