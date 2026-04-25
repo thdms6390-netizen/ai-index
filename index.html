@@ -1539,7 +1539,7 @@ function renderDetail(catIdx){
 }
 
 // ----- filter / nav active -----
-function applyFilter(cat){
+function applyFilter(cat, fromHistory){
   currentCat = cat;
   // sidebar nav
   $$('.nav-item').forEach(b=>b.classList.toggle('active', String(b.dataset.cat)===String(cat)));
@@ -1550,7 +1550,6 @@ function applyFilter(cat){
     $('#detailView').style.display = 'none';
     $('#sectionTitle').textContent = '카테고리별 톱 3';
     $('#sectionMeta').textContent = '16 categories · 48 tools';
-    // un-filter table
     $$('#lbTable tbody tr').forEach(tr=>tr.style.display='');
   } else {
     $('#grid').style.display = 'none';
@@ -1558,7 +1557,6 @@ function applyFilter(cat){
     $('#detailView').style.display = '';
     $('#sectionTitle').textContent = `${DATA[cat].kr} — 상세 비교`;
     $('#sectionMeta').textContent = `3 tools · ranked by popularity`;
-    // filter table to category only
     $$('#lbTable tbody tr').forEach(tr=>{
       tr.style.display = String(tr.dataset.catIdx) === String(cat) ? '' : 'none';
     });
@@ -1566,9 +1564,36 @@ function applyFilter(cat){
 
   // crumb
   $('#crumbCat').textContent = cat==='all' ? '전체' : DATA[cat].kr;
+
+  // browser history (for back/forward)
+  if(!fromHistory){
+    const hash = cat==='all' ? ' ' : `#cat=${cat}`;
+    if(location.hash !== (cat==='all' ? '' : `#cat=${cat}`)){
+      if(cat==='all'){
+        history.pushState({cat:'all'}, '', location.pathname + location.search);
+      } else {
+        history.pushState({cat}, '', `#cat=${cat}`);
+      }
+    }
+  }
 }
+
+function readCatFromHash(){
+  const m = location.hash.match(/cat=(\d+)/);
+  return m ? parseInt(m[1]) : 'all';
+}
+
+window.addEventListener('popstate',(e)=>{
+  const cat = (e.state && 'cat' in e.state) ? e.state.cat : readCatFromHash();
+  applyFilter(cat, true);
+});
+
 // "전체" nav item (static, attached once)
 $('.nav-item[data-cat="all"]').addEventListener('click',()=>applyFilter('all'));
+
+// initial state from URL hash
+const initialCat = readCatFromHash();
+if(initialCat !== 'all') applyFilter(initialCat, true);
 
 // ----- region toggle -----
 $$('#segRegion button').forEach(b=>b.addEventListener('click',()=>{
