@@ -1397,13 +1397,16 @@ function buildTable(){
 let currentCat = 'all';
 
 function setRegion(region){
+  const savedScroll = window.scrollY;
   currentRegion = region;
   DATA = computeData(region);
   buildNav();
   buildGrid();
   buildTable();
-  applyFilter(currentCat);
+  applyFilter(currentCat, true); // skip scroll/history
   $$('#segRegion button').forEach(b=>b.classList.toggle('on', b.dataset.region===region));
+  // 스크롤 위치 복원
+  requestAnimationFrame(()=>window.scrollTo({top:savedScroll}));
 }
 
 // initial build
