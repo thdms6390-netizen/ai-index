@@ -540,12 +540,6 @@
       <span class="name"><b>AI Index</b><span>v2026.04</span></span>
     </div>
 
-    <div class="search">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input id="search" placeholder="도구 검색..." />
-      <kbd>⌘K</kbd>
-    </div>
-
     <div class="nav-section">
       <div class="nav-label">개요</div>
       <button class="nav-item active" data-cat="all">
@@ -1601,38 +1595,6 @@ $$('#segRegion button').forEach(b=>b.addEventListener('click',()=>{
 }));
 
 
-// ----- search -----
-$('#search').addEventListener('input',(e)=>{
-  const q = e.target.value.trim().toLowerCase();
-  const visiblePanels = [];
-  $$('#grid .panel').forEach(p=>{
-    if(!q){p.style.display='';return}
-    const txt = p.textContent.toLowerCase();
-    const match = txt.includes(q);
-    p.style.display = match ? '' : 'none';
-    if(match) visiblePanels.push(p);
-  });
-  $$('#lbTable tbody tr').forEach(tr=>{
-    if(!q){tr.style.display='';return}
-    const txt = tr.textContent.toLowerCase();
-    tr.style.display = txt.includes(q) ? '' : 'none';
-  });
-
-  // sync sidebar highlight
-  if(!q){
-    // 빈 검색: 전체 활성
-    $$('.nav-item').forEach(b=>b.classList.toggle('active', b.dataset.cat === 'all'));
-  } else if(visiblePanels.length === 1){
-    // 정확히 1개 매칭: 그 카테고리 활성
-    const catIdx = visiblePanels[0].dataset.cat;
-    $$('.nav-item').forEach(b=>b.classList.toggle('active', String(b.dataset.cat) === String(catIdx)));
-  } else {
-    // 0개 또는 다중 매칭: 아무것도 활성 X
-    $$('.nav-item').forEach(b=>b.classList.remove('active'));
-  }
-});
-
-
 // ----- bar fill animation -----
 const io = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
@@ -1646,11 +1608,6 @@ const io = new IntersectionObserver((entries)=>{
   });
 },{threshold:.2});
 $$('.panel').forEach(p=>io.observe(p));
-
-// ⌘K focus
-document.addEventListener('keydown',(e)=>{
-  if((e.metaKey||e.ctrlKey) && e.key==='k'){e.preventDefault();$('#search').focus()}
-});
 </script>
 </body>
 </html>
