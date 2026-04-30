@@ -624,7 +624,7 @@
         <div class="kpi">
           <div class="lab"><span class="ic"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.39 0 4.68.94 6.36 2.64L21 8"/><polyline points="21 3 21 8 16 8"/></svg></span>마지막 업데이트</div>
           <div class="v" style="font-size:24px" id="kpiUpdated">2026 · 04 · 25</div>
-          <div class="delta flat" id="kpiUpdatedDelta">Claude 자동 큐레이션 · 2주 주기 · 다음 5/9</div>
+          <div class="delta flat" id="kpiUpdatedDelta">Claude 자동 큐레이션 · 1주 주기 · 다음 5/4</div>
           <svg class="spark" width="80" height="28" viewBox="0 0 80 28"><polyline fill="none" stroke="#a855f7" stroke-width="1.6" points="0,14 10,12 20,16 30,10 40,14 50,8 60,12 70,6 80,10"/></svg>
         </div>
       </div>
@@ -1423,7 +1423,7 @@ buildTable();
     if(!r.ok) return;
     const [commit] = await r.json();
     const updated = new Date(commit.commit.author.date);
-    const nextSync = new Date(updated.getTime() + 14*24*60*60*1000);
+    const nextSync = new Date(updated.getTime() + 7*24*60*60*1000);
     const pad = n => String(n).padStart(2,'0');
     const yyyy = updated.getFullYear();
     const mm = pad(updated.getMonth()+1);
@@ -1432,7 +1432,7 @@ buildTable();
     const nDd = pad(nextSync.getDate());
     const $u = id => document.getElementById(id);
     if($u('kpiUpdated')) $u('kpiUpdated').textContent = `${yyyy} · ${mm} · ${dd}`;
-    if($u('kpiUpdatedDelta')) $u('kpiUpdatedDelta').textContent = `Claude 자동 큐레이션 · 2주 주기 · 다음 ${parseInt(nMm)}/${parseInt(nDd)}`;
+    if($u('kpiUpdatedDelta')) $u('kpiUpdatedDelta').textContent = `Claude 자동 큐레이션 · 1주 주기 · 다음 ${parseInt(nMm)}/${parseInt(nDd)}`;
     if($u('sidebarUpdated')) $u('sidebarUpdated').textContent = `${mm} / ${dd}`;
     if($u('sidebarNextSync')) $u('sidebarNextSync').textContent = `${nMm} / ${nDd}`;
   }catch(e){}
