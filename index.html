@@ -565,8 +565,8 @@
     </div>
 
     <div class="sidebar-foot">
-      <div class="row"><span>Updated</span><b id="sidebarUpdated">05 / 25</b></div>
-      <div class="row"><span>Next sync</span><b id="sidebarNextSync">06 / 01</b></div>
+      <div class="row"><span>Updated</span><b id="sidebarUpdated">07 / 06</b></div>
+      <div class="row"><span>Next sync</span><b id="sidebarNextSync">07 / 13</b></div>
       <div class="row"><span>Source</span><b>11 sites</b></div>
     </div>
   </aside>
@@ -623,8 +623,8 @@
         </div>
         <div class="kpi">
           <div class="lab"><span class="ic"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.39 0 4.68.94 6.36 2.64L21 8"/><polyline points="21 3 21 8 16 8"/></svg></span>마지막 업데이트</div>
-          <div class="v" style="font-size:24px" id="kpiUpdated">2026 · 05 · 25</div>
-          <div class="delta flat" id="kpiUpdatedDelta">Claude 자동 큐레이션 · 1주 주기 · 다음 6/1</div>
+          <div class="v" style="font-size:24px" id="kpiUpdated">2026 · 07 · 06</div>
+          <div class="delta flat" id="kpiUpdatedDelta">Claude 자동 큐레이션 · 1주 주기 · 다음 7/13</div>
           <svg class="spark" width="80" height="28" viewBox="0 0 80 28"><polyline fill="none" stroke="#a855f7" stroke-width="1.6" points="0,14 10,12 20,16 30,10 40,14 50,8 60,12 70,6 80,10"/></svg>
         </div>
       </div>
@@ -678,12 +678,12 @@ const KR_OVERRIDES = {
      users:['한국 직장인','학생','연구자'],
      why:'한국에서도 <b>가장 광범위한 사용자 기반</b>. 국내 직장인·학생의 사실상 표준.',
      url:'https://chatgpt.com'},
-    {name:'Claude', maker:'Anthropic · 미국', tag:'Long-context', scale:'전문가 선호', score:88,
+    {name:'Claude', maker:'Anthropic · 미국', tag:'Sonnet 5', scale:'전문가 선호', score:89,
      desc:'긴 자료 처리와 글쓰기 품질이 압도적. 한국 변호사·연구자·기획자가 점차 메인으로 옮겨가는 중.',
-     features:['Opus 4.7','Artifacts','Projects','MCP'],
+     features:['Sonnet 5','Fable 5','Artifacts','MCP'],
      pricing:'무료 · Pro $20 · Max $200', founded:'2021',
      users:['로펌','컨설팅','연구자'],
-     why:'<b>긴 한국어 문서 처리</b>가 ChatGPT보다 자연스러움. 한국 전문직 점점 이동.',
+     why:'<b>긴 한국어 문서 처리</b>가 ChatGPT보다 자연스러움. 6/30 Sonnet 5로 성능 급상승.',
      url:'https://claude.ai'},
     {name:'뤼튼 (Wrtn)', maker:'뤼튼테크놀로지스 · 한국', tag:'Korean AI', scale:'한국 650만+', score:80,
      desc:'한국 토종 올인원 AI 챗봇. 글쓰기·검색·캐릭터 대화까지 한국어에 최적화. 무료 사용량이 후합니다.',
@@ -747,12 +747,12 @@ const KR_OVERRIDES = {
      users:['한국 직장인','학생','강의 녹취'],
      why:'<b>한국어 인식 정확도 1위</b>. 무료 + 모바일 앱 + 네이버 통합으로 한국 시장 압도.',
      url:'https://clovanote.naver.com'},
-    {name:'Daglo', maker:'Daglo · 한국', tag:'Enterprise', scale:'B2B 강세', score:84,
-     desc:'한국 토종 회의록 SaaS. 기업 보안·관리 기능에 강점이 있어 사내 도입이 빠른 도구입니다.',
-     features:['실시간 회의록','화자 분리','검색','API'],
+    {name:'Daglo', maker:'Daglo · 한국', tag:'Enterprise', scale:'B2B 강세', score:85,
+     desc:'한국 토종 회의록 SaaS. 기업 보안·관리 기능에 강점. 최근 ChatGPT·Gemini·Claude 등 10개 LLM을 워크스페이스에 통합했습니다.',
+     features:['10 LLM 통합','실시간 회의록','화자 분리','API'],
      pricing:'무료 · Pro 유료', founded:'2021',
      users:['스타트업','대기업','연구소'],
-     why:'<b>B2B 한국 시장 1위</b>. 보안·온프레미스 옵션으로 기업 도입 빠름.',
+     why:'<b>B2B 한국 시장 1위</b>. 회의록 + 10 LLM 통합으로 기업 워크플로 원스톱.',
      url:'https://daglo.ai'},
     {name:'VITO', maker:'리턴제로 · 한국', tag:'Voice AI', scale:'한국어 강자', score:78,
      desc:'한국어 음성 인식에 특화된 한국 토종 솔루션. 통화 녹음·미팅 노트 변환에 강합니다.',
@@ -793,12 +793,12 @@ const KR_OVERRIDES = {
      users:['유튜버','이러닝','쇼츠 제작자'],
      why:'<b>한국어 자연스러움 1위</b>. 다양한 캐릭터 보이스로 한국 콘텐츠 제작자 표준.',
      url:'https://typecast.ai/kr'},
-    {name:'Vrew', maker:'보이저엑스 · 한국', tag:'Video TTS', scale:'한국 유튜버 표준', score:88,
-     desc:'영상 자막 + AI 더빙을 한 번에. 한국 유튜버·쇼츠 크리에이터 사이 사실상 표준 도구입니다.',
-     features:['자동 자막','AI 더빙','컷 편집','한국어'],
+    {name:'Vrew', maker:'보이저엑스 · 한국', tag:'Video TTS', scale:'한국 유튜버 표준', score:86,
+     desc:'영상 자막 + AI 더빙을 한 번에. 한국 유튜버·쇼츠 크리에이터의 표준 도구. 7/1부터 모바일 서비스 종료·데스크톱 전용.',
+     features:['자동 자막','AI 더빙','컷 편집','데스크톱 전용'],
      pricing:'무료 · Pro 14,900원/월', founded:'2017',
      users:['한국 유튜버','쇼츠 제작자','교사'],
-     why:'<b>한국 영상 제작자 1위</b>. 자막 + 더빙 + 편집을 한 도구로 끝냄.',
+     why:'<b>한국 영상 제작자 1위</b>. 자막 + 더빙 + 편집을 한 도구로. 모바일 이탈은 감안.',
      url:'https://vrew.voyagerx.com/ko/'},
     {name:'ElevenLabs', maker:'ElevenLabs · 영국', tag:'Studio', scale:'글로벌 1위', score:82,
      desc:'30개국 언어 + 풍부한 감정 표현. 한국에서도 영어/다국어 콘텐츠 제작 시 사용됩니다.',
@@ -837,12 +837,12 @@ const GLOBAL_DATA = [
   {
     kr:'코딩 / 개발', en:'Coding & Engineering',
     tools:[
-      {name:'Claude Code', maker:'Anthropic · 미국', tag:'Agentic CLI', scale:'$2.5B run rate', score:95,
+      {name:'Claude Code', maker:'Anthropic · 미국', tag:'Agentic CLI', scale:'$2.5B run rate', score:96,
        desc:'터미널에서 작동하는 코딩 에이전트. 멀티파일 리팩터링·테스트 실행·PR 생성까지 한 흐름으로 처리합니다.',
-       features:['CLI Agent','MCP 통합','Opus 4.7','Hooks'],
+       features:['CLI Agent','MCP 통합','Sonnet 5','Hooks'],
        pricing:'Pro $20/월 · Max $200/월', founded:'2025',
        users:['Stripe','Replit','Vercel','Datadog'],
-       why:'Opus 4.7 기반 대형 코드베이스 처리 + <b>SWE-bench Pro 64%</b>로 동급 최고.',
+       why:'신규 <b>Sonnet 5</b>(6/30 출시, 1M 컨텍스트) 기본 탑재. Anthropic 매출 OpenAI 추월(7/3).',
        url:'https://claude.com/claude-code'},
       {name:'Cursor', maker:'Anysphere · 미국', tag:'AI IDE', scale:'$50B 가치', score:93,
        desc:'VS Code 기반의 AI 에디터. 빠른 자동완성·컨텍스트 인식 채팅·에이전트 모드까지 일상 코딩에 최적.',
@@ -870,12 +870,12 @@ const GLOBAL_DATA = [
        users:['전 세계 직장인','학생','연구자'],
        why:'<b>주간 활성 사용자 10억 명</b> 돌파. 인류 역사상 가장 빠르게 성장한 소비자 제품.',
        url:'https://chatgpt.com'},
-      {name:'Claude', maker:'Anthropic · 미국', tag:'Opus 4.7', scale:'$380B 가치', score:91,
+      {name:'Claude', maker:'Anthropic · 미국', tag:'Sonnet 5', scale:'매출 OpenAI 추월', score:92,
        desc:'긴 자료를 통째로 읽고 일관성 있는 보고서를 써냅니다. 전략·법률·학술 문서에서 전문가들이 가장 선호하는 LLM.',
-       features:['Opus 4.7','Artifacts','Projects','MCP'],
+       features:['Sonnet 5','Fable 5','Artifacts','MCP'],
        pricing:'무료 · Pro $20 · Max $200', founded:'2021',
        users:['DoorDash','Bridgewater','Pfizer','LexisNexis'],
-       why:'<b>200K+ 토큰</b> 컨텍스트와 글쓰기 품질로 전문가층 압도적 선호.',
+       why:'6/30 <b>Sonnet 5</b> 출시로 에이전틱 성능 급상승. 7/3 <b>매출로 OpenAI 추월</b>.',
        url:'https://claude.ai'},
       {name:'Notion AI', maker:'Notion · 미국', tag:'Workspace', scale:'100M+ users', score:82,
        desc:'노션 문서·DB·노트 안에 통합된 AI. 워크스페이스를 떠나지 않고 작성·요약·검색까지 한 곳에서.',
