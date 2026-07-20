@@ -565,8 +565,8 @@
     </div>
 
     <div class="sidebar-foot">
-      <div class="row"><span>Updated</span><b id="sidebarUpdated">07 / 13</b></div>
-      <div class="row"><span>Next sync</span><b id="sidebarNextSync">07 / 20</b></div>
+      <div class="row"><span>Updated</span><b id="sidebarUpdated">07 / 20</b></div>
+      <div class="row"><span>Next sync</span><b id="sidebarNextSync">07 / 27</b></div>
       <div class="row"><span>Source</span><b>11 sites</b></div>
     </div>
   </aside>
@@ -623,8 +623,8 @@
         </div>
         <div class="kpi">
           <div class="lab"><span class="ic"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.39 0 4.68.94 6.36 2.64L21 8"/><polyline points="21 3 21 8 16 8"/></svg></span>마지막 업데이트</div>
-          <div class="v" style="font-size:24px" id="kpiUpdated">2026 · 07 · 13</div>
-          <div class="delta flat" id="kpiUpdatedDelta">Claude 자동 큐레이션 · 1주 주기 · 다음 7/20</div>
+          <div class="v" style="font-size:24px" id="kpiUpdated">2026 · 07 · 20</div>
+          <div class="delta flat" id="kpiUpdatedDelta">Claude 자동 큐레이션 · 1주 주기 · 다음 7/27</div>
           <svg class="spark" width="80" height="28" viewBox="0 0 80 28"><polyline fill="none" stroke="#a855f7" stroke-width="1.6" points="0,14 10,12 20,16 30,10 40,14 50,8 60,12 70,6 80,10"/></svg>
         </div>
       </div>
@@ -877,12 +877,12 @@ const GLOBAL_DATA = [
        users:['DoorDash','Bridgewater','Pfizer','LexisNexis'],
        why:'<b>Opus 4.7 xhigh + Sonnet 5의 1M 컨텍스트</b>와 글쓰기 품질로 전문가층 압도적 선호.',
        url:'https://claude.ai'},
-      {name:'Notion AI', maker:'Notion · 미국', tag:'Workspace', scale:'100M+ users', score:82,
-       desc:'노션 문서·DB·노트 안에 통합된 AI. 워크스페이스를 떠나지 않고 작성·요약·검색까지 한 곳에서.',
-       features:['Q&A','Auto-fill','Summary','Translate'],
+      {name:'Notion AI', maker:'Notion · 미국', tag:'Agents', scale:'100M+ users', score:84,
+       desc:'노션 안에 통합된 AI 에이전트. 다중 에이전트 협업 + Excel·PowerPoint 파일 처리 + 스피커 라벨 회의록까지.',
+       features:['멀티 에이전트','Excel/PPT 처리','회의록 화자 라벨','MCP 확장'],
        pricing:'Add-on $10/월', founded:'2016',
        users:['스타트업','리서치 팀','PM'],
-       why:'<b>노션 사용자 1억+</b>의 워크스페이스 안에 들어온 AI. 문서·DB·노트 통합.',
+       why:'<b>노션 사용자 1억+</b> 워크스페이스의 에이전트화. 문서·DB·회의록·파일 처리 통합.',
        url:'https://www.notion.com/product/ai'},
     ]
   },
@@ -948,12 +948,12 @@ const GLOBAL_DATA = [
        users:['기업 미팅','기자','대학원생'],
        why:'음성 → 텍스트 회의록의 <b>사실상 표준</b> + MCP·에이전트로 워크플로 자동화.',
        url:'https://otter.ai'},
-      {name:'Fireflies', maker:'Fireflies · 미국', tag:'Auto-Bot', scale:'500K+ teams', score:82,
-       desc:'화상회의 자동 참석 + 요약. 영업·CS 팀의 워크플로에서 폭발적으로 사용됩니다.',
-       features:['Auto-Join','AI Summary','CRM 연동','Soundbites'],
+      {name:'Fireflies', maker:'Fireflies · 미국', tag:'Auto-Bot', scale:'20M+ users · 75% F500', score:86,
+       desc:'화상회의 자동 참석 + 요약. AskFred(Perplexity 검색) 통합으로 회의 중 실시간 웹 검색까지 지원합니다.',
+       features:['Auto-Join','AskFred 검색','CRM 연동','100+ 언어'],
        pricing:'무료 · Pro $18/월~', founded:'2016',
-       users:['영업 팀','CS 팀','스타트업'],
-       why:'<b>화상회의 자동 참석</b> + 요약. 영업·CS 팀에서 폭발적 사용.',
+       users:['영업 팀','CS 팀','Fortune 500'],
+       why:'<b>Fortune 500의 75% 도입</b>. 유니콘 진입 + Perplexity 통합으로 회의 인텔리전스 1위.',
        url:'https://fireflies.ai'},
       {name:'tl;dv', maker:'tl;dv · 독일', tag:'Free Tier', scale:'1M+ users', score:74,
        desc:'무료 티어가 후한 회의 노트 도구. 영상 클립 추출 + 요약을 한 도구로 끝낼 수 있습니다.',
@@ -968,11 +968,11 @@ const GLOBAL_DATA = [
     kr:'검색 / 리서치', en:'Search & Research',
     tools:[
       {name:'Perplexity', maker:'Perplexity · 미국', tag:'AI Search', scale:'45M MAU · $22.6B', score:95,
-       desc:'출처 인용 + 정확도로 AI 검색의 표준이 된 도구. 학술·리서치 분야에서 1순위 선택.',
-       features:['Pro Search','Spaces','Sources','Comet Browser'],
+       desc:'출처 인용 + 정확도로 AI 검색의 표준. Word·Excel·PowerPoint·Outlook 안에 들어간 Perplexity Computer로 업무 통합까지.',
+       features:['Comet Browser','MS 365 통합','자가학습 메모리','Fable 5 오케스트레이션'],
        pricing:'무료 · Pro $20/월', founded:'2022',
        users:['연구자','기자','학생'],
-       why:'<b>출처 인용 + 정확도</b>로 AI 검색의 표준. 월간 45M · ARR $450M로 급성장.',
+       why:'<b>출처 인용 + 정확도</b>로 AI 검색의 표준. MS 365 통합 · Fable 5 라우팅으로 업무 진출.',
        url:'https://www.perplexity.ai'},
       {name:'ChatGPT Search', maker:'OpenAI · 미국', tag:'Web', scale:'1B WAU', score:88,
        desc:'ChatGPT 안에서 즉시 웹 검색. 가장 넓은 사용자 기반과 통합 환경이 강점.',
