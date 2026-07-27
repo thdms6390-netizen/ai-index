@@ -565,8 +565,8 @@
     </div>
 
     <div class="sidebar-foot">
-      <div class="row"><span>Updated</span><b id="sidebarUpdated">07 / 13</b></div>
-      <div class="row"><span>Next sync</span><b id="sidebarNextSync">07 / 20</b></div>
+      <div class="row"><span>Updated</span><b id="sidebarUpdated">07 / 27</b></div>
+      <div class="row"><span>Next sync</span><b id="sidebarNextSync">08 / 03</b></div>
       <div class="row"><span>Source</span><b>11 sites</b></div>
     </div>
   </aside>
@@ -618,13 +618,13 @@
         <div class="kpi">
           <div class="lab"><span class="ic"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>이달의 1위</div>
           <div class="v" style="font-size:24px">ChatGPT</div>
-          <div class="delta flat">1B+ WAU · 종합 1위</div>
+          <div class="delta flat">900M WAU · 1B+ MAU · 종합 1위</div>
           <svg class="spark" width="80" height="28" viewBox="0 0 80 28"><circle cx="68" cy="14" r="9" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/><text x="68" y="18" text-anchor="middle" font-size="10" font-weight="700" fill="#d97706">★</text></svg>
         </div>
         <div class="kpi">
           <div class="lab"><span class="ic"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.39 0 4.68.94 6.36 2.64L21 8"/><polyline points="21 3 21 8 16 8"/></svg></span>마지막 업데이트</div>
-          <div class="v" style="font-size:24px" id="kpiUpdated">2026 · 07 · 13</div>
-          <div class="delta flat" id="kpiUpdatedDelta">Claude 자동 큐레이션 · 1주 주기 · 다음 7/20</div>
+          <div class="v" style="font-size:24px" id="kpiUpdated">2026 · 07 · 27</div>
+          <div class="delta flat" id="kpiUpdatedDelta">Claude 자동 큐레이션 · 1주 주기 · 다음 8/3</div>
           <svg class="spark" width="80" height="28" viewBox="0 0 80 28"><polyline fill="none" stroke="#a855f7" stroke-width="1.6" points="0,14 10,12 20,16 30,10 40,14 50,8 60,12 70,6 80,10"/></svg>
         </div>
       </div>
@@ -678,12 +678,12 @@ const KR_OVERRIDES = {
      users:['한국 직장인','학생','연구자'],
      why:'한국에서도 <b>가장 광범위한 사용자 기반</b>. 국내 직장인·학생의 사실상 표준.',
      url:'https://chatgpt.com'},
-    {name:'Claude', maker:'Anthropic · 미국', tag:'Long-context', scale:'전문가 선호', score:89,
-     desc:'긴 자료 처리와 글쓰기 품질이 압도적. Sonnet 5의 1M 컨텍스트로 한국 변호사·연구자가 메인으로 이동.',
-     features:['Opus 4.7','Sonnet 5 1M ctx','Artifacts','MCP'],
+    {name:'Claude', maker:'Anthropic · 미국', tag:'Opus 5', scale:'전문가 선호', score:91,
+     desc:'긴 자료 처리와 글쓰기 품질이 압도적. 7/24 Opus 5 출시로 한국 변호사·연구자가 메인으로 이동.',
+     features:['Opus 5 (7/24)','Sonnet 5 1M ctx','Artifacts','MCP'],
      pricing:'무료 · Pro $20 · Max $200', founded:'2021',
      users:['로펌','컨설팅','연구자'],
-     why:'<b>긴 한국어 문서 처리</b>가 ChatGPT보다 자연스러움. Sonnet 5 1M 컨텍스트로 가속.',
+     why:'<b>긴 한국어 문서 처리</b>가 ChatGPT보다 자연스러움. Opus 5 + Sonnet 5 1M 컨텍스트로 가속.',
      url:'https://claude.ai'},
     {name:'뤼튼 (Wrtn)', maker:'뤼튼테크놀로지스 · 한국', tag:'Korean AI', scale:'한국 700만+', score:81,
      desc:'한국 토종 올인원 AI 챗봇. 글쓰기·검색·캐릭터 대화까지 한국어에 최적화. 무료 사용량이 후합니다.',
@@ -717,12 +717,12 @@ const KR_OVERRIDES = {
      url:'https://www.mangoboard.net'},
   ],
   '캐릭터 / 일러스트': [
-    {name:'Midjourney', maker:'Midjourney · 미국', tag:'v8.1', scale:'프로 표준', score:94,
-     desc:'아트 디렉션 정점. 한국에서도 광고·필름·게임 컨셉 아티스트들이 가장 많이 사용합니다.',
-     features:['v8.1 Model','HD 2K','Character Ref','Niji'],
+    {name:'Midjourney', maker:'Midjourney · 미국', tag:'v8.2', scale:'프로 표준', score:94,
+     desc:'아트 디렉션 정점. 한국에서도 광고·필름·게임 컨셉 아티스트들이 가장 많이 사용. 7/24 v8.2 기본 승격.',
+     features:['v8.2 Default','HD 2K','Character Ref','Niji'],
      pricing:'Basic $10/월~', founded:'2022',
      users:['광고 에이전시','일러스트레이터','게임 컨셉팀'],
-     why:'한국 프로 아티스트도 <b>아트 디렉션 1위</b>. 광고·필름 컨셉 표준.',
+     why:'한국 프로 아티스트도 <b>아트 디렉션 1위</b>. v8.2로 미학·개인화 강화.',
      url:'https://www.midjourney.com'},
     {name:'NovelAI', maker:'Anlatan · 미국', tag:'Anime', scale:'한국 웹툰 1위', score:90,
      desc:'애니메·웹툰 화풍 강자. 한국 웹툰 작가·동인 일러스트레이터의 핵심 보조 도구로 정착.',
@@ -837,12 +837,12 @@ const GLOBAL_DATA = [
   {
     kr:'코딩 / 개발', en:'Coding & Engineering',
     tools:[
-      {name:'Claude Code', maker:'Anthropic · 미국', tag:'Agentic CLI', scale:'$2.5B run rate', score:95,
-       desc:'터미널에서 작동하는 코딩 에이전트. 멀티파일 리팩터링·테스트 실행·PR 생성까지 한 흐름으로 처리합니다.',
-       features:['CLI Agent','MCP 통합','Opus 4.7','Hooks'],
+      {name:'Claude Code', maker:'Anthropic · 미국', tag:'Agentic CLI', scale:'$2.5B run rate', score:96,
+       desc:'터미널에서 작동하는 코딩 에이전트. Opus 5 탑재로 멀티파일 리팩터링·테스트 실행·PR 생성까지 한 흐름으로 처리합니다.',
+       features:['CLI Agent','MCP 통합','Opus 5 (7/24)','Hooks'],
        pricing:'Pro $20/월 · Max $200/월', founded:'2025',
        users:['Stripe','Replit','Vercel','Datadog'],
-       why:'Opus 4.7 기반 대형 코드베이스 처리 + <b>SWE-bench Pro 64%</b>로 동급 최고.',
+       why:'Opus 5 기반 대형 코드베이스 처리 + <b>Agentic Index 55.3 · Intelligence Index 61</b>로 동급 1위.',
        url:'https://claude.com/claude-code'},
       {name:'Cursor', maker:'Anysphere · 미국', tag:'AI IDE', scale:'$60B 가치', score:94,
        desc:'VS Code 기반의 AI 에디터. 빠른 자동완성·컨텍스트 인식 채팅·에이전트 모드까지 일상 코딩에 최적.',
@@ -863,19 +863,19 @@ const GLOBAL_DATA = [
   {
     kr:'기획서 / 문서', en:'Documents & Reports',
     tools:[
-      {name:'ChatGPT', maker:'OpenAI · 미국', tag:'All-round', scale:'1B+ WAU', score:99,
+      {name:'ChatGPT', maker:'OpenAI · 미국', tag:'All-round', scale:'900M WAU · 1B+ MAU', score:99,
        desc:'기획서 초안부터 리서치, 표·다이어그램 생성까지. 실무에서 가장 먼저 열어보는 LLM이자 사실상의 표준.',
        features:['GPT-5.6 Sol/Terra/Luna','Code Interpreter','DALL-E 3','Memory'],
        pricing:'무료 · Plus $20 · Pro $200', founded:'2022',
        users:['전 세계 직장인','학생','연구자'],
-       why:'<b>주간 활성 사용자 10억 명</b> 돌파. 인류 역사상 가장 빠르게 성장한 소비자 제품.',
+       why:'<b>월간 활성 10억 · 주간 9억</b> 돌파(6월). 인류 역사상 가장 빠르게 성장한 소비자 제품.',
        url:'https://chatgpt.com'},
-      {name:'Claude', maker:'Anthropic · 미국', tag:'Opus 4.7', scale:'$380B 가치', score:92,
-       desc:'긴 자료를 통째로 읽고 일관성 있는 보고서를 써냅니다. 전략·법률·학술 문서에서 전문가들이 가장 선호하는 LLM.',
-       features:['Opus 4.7 (xhigh)','Sonnet 5 1M ctx','Artifacts','MCP'],
+      {name:'Claude', maker:'Anthropic · 미국', tag:'Opus 5', scale:'$965B 가치', score:94,
+       desc:'긴 자료를 통째로 읽고 일관성 있는 보고서를 써냅니다. 7/24 Opus 5 출시로 지능 지수 61 · Agentic 55.3 1위 등극.',
+       features:['Opus 5 (5-level effort)','Sonnet 5 1M ctx','Artifacts','MCP'],
        pricing:'무료 · Pro $20 · Max $200', founded:'2021',
        users:['DoorDash','Bridgewater','Pfizer','LexisNexis'],
-       why:'<b>Opus 4.7 xhigh + Sonnet 5의 1M 컨텍스트</b>와 글쓰기 품질로 전문가층 압도적 선호.',
+       why:'<b>Opus 5</b>가 Artificial Analysis Intelligence Index 61 · Agentic 55.3으로 GPT-5.6 Sol을 제치고 1위. $965B Series H·IPO 준비 중.',
        url:'https://claude.ai'},
       {name:'Notion AI', maker:'Notion · 미국', tag:'Workspace', scale:'100M+ users', score:82,
        desc:'노션 문서·DB·노트 안에 통합된 AI. 워크스페이스를 떠나지 않고 작성·요약·검색까지 한 곳에서.',
@@ -968,11 +968,11 @@ const GLOBAL_DATA = [
     kr:'검색 / 리서치', en:'Search & Research',
     tools:[
       {name:'Perplexity', maker:'Perplexity · 미국', tag:'AI Search', scale:'45M MAU · $22.6B', score:95,
-       desc:'출처 인용 + 정확도로 AI 검색의 표준이 된 도구. 학술·리서치 분야에서 1순위 선택.',
-       features:['Pro Search','Spaces','Sources','Comet Browser'],
+       desc:'출처 인용 + 정확도로 AI 검색의 표준. Deep Research in Computer·Self-improving Memory·포킹까지 확장돼 리서치 자동화 허브로 진화 중.',
+       features:['Deep Research','Self-improving Memory','Comet Browser','Enterprise API'],
        pricing:'무료 · Pro $20/월', founded:'2022',
        users:['연구자','기자','학생'],
-       why:'<b>출처 인용 + 정확도</b>로 AI 검색의 표준. 월간 45M · ARR $450M로 급성장.',
+       why:'<b>출처 인용 + Self-improving Memory</b>. 세션·커넥터를 가로지르는 컨텍스트 그래프로 리서치 자동화 1위.',
        url:'https://www.perplexity.ai'},
       {name:'ChatGPT Search', maker:'OpenAI · 미국', tag:'Web', scale:'1B WAU', score:88,
        desc:'ChatGPT 안에서 즉시 웹 검색. 가장 넓은 사용자 기반과 통합 환경이 강점.',
@@ -1085,12 +1085,12 @@ const GLOBAL_DATA = [
        users:['Disney','New Balance','SNL','광고 에이전시'],
        why:'생성+편집+VFX를 한 워크플로에 묶은 종합 플랫폼. <b>정교한 창작 통제력은 여전히 1위</b>.',
        url:'https://runwayml.com'},
-      {name:'Kling', maker:'Kuaishou · 중국', tag:'Kling 3.0', scale:'고성장', score:86,
-       desc:'시네마틱 라이팅과 복잡한 모션(머리카락·액체·천)을 가장 안정적으로 처리. 멀티샷 스토리보드와 컷 간 오디오 싱크까지 지원합니다.',
-       features:['Camera Motion','멀티샷','네이티브 오디오','Img→Video'],
-       pricing:'무료 · Pro $10/월~', founded:'2024',
+      {name:'Kling', maker:'Kuaishou · 중국', tag:'Kling v3', scale:'Arena 1934 · 1위', score:88,
+       desc:'텍스트→비디오 아레나 리더보드 1위. 시네마틱 라이팅과 복잡한 모션(머리카락·액체·천)을 가장 안정적으로 처리하며 Turbo는 $0.11~0.14/초 가성비.',
+       features:['Kling v3 Arena 1위','Turbo $0.11~0.14/s','멀티샷','네이티브 오디오'],
+       pricing:'무료 · Pro $10/월~ · Turbo $0.11~0.14/s', founded:'2024',
        users:['TikTok 크리에이터','중국 광고사','인디 필름'],
-       why:'시네마틱 품질·모션 안정성에서 Veo와 동급. <b>가성비 1위 영상 생성기</b>.',
+       why:'<b>Arena 1934로 텍스트→비디오 1위</b>. 시네마틱 품질에 Veo와 동급, 가격은 절반.',
        url:'https://klingai.com'},
     ]
   },
@@ -1123,19 +1123,19 @@ const GLOBAL_DATA = [
   {
     kr:'음악 / 노래 생성', en:'Music Generation',
     tools:[
-      {name:'Suno', maker:'Suno · 미국', tag:'Vocal+Music', scale:'12M+ users', score:96,
-       desc:'보컬·가사·멜로디 품질이 압도적 1위. Studio DAW·Generative Stems·Vocal Personas까지 창작 파이프라인 완성.',
-       features:['v5 + Studio DAW','12-track Stems','Vocal Personas','44.1kHz'],
+      {name:'Suno', maker:'Suno · 미국', tag:'v5.5', scale:'$300M ARR · 2M paid', score:97,
+       desc:'보컬·가사·멜로디 품질이 압도적 1위. v5.5 + Studio DAW·Generative Stems·Vocal Personas로 창작 파이프라인 완성. Warner 라이선스 v6 모델 롤아웃 예정.',
+       features:['v5.5 + Studio DAW','12-track Stems','Vocal Personas','Warner 라이선스'],
        pricing:'무료 · Pro $8/월', founded:'2023',
        users:['인디 뮤지션','TikTok 크리에이터'],
-       why:'ELO 1293으로 <b>경쟁 모델 압도</b>. 한국어 가사도 자연스러움.',
+       why:'<b>ARR $300M · 유료 2M명</b>. 카테고리 매출·사용자 압도적 1위, 한국어 가사도 자연스러움.',
        url:'https://suno.com'},
-      {name:'Udio', maker:'Udio · 미국', tag:'Pro Audio', scale:'1M+ users', score:84,
-       desc:'더 정교한 컨트롤 + 오디오 품질 정상급. 프로 뮤지션·프로듀서들이 선호합니다.',
-       features:['고품질 오디오','Inpainting','Stems','Extend'],
+      {name:'Udio', maker:'Udio · 미국', tag:'Remix', scale:'라벨 승인 후 재편', score:78,
+       desc:'UMG·Warner 합의 이후 리믹스·인터랙티브 툴로 전환. 프롬프트·재생·반복은 자유지만 내보내기는 라벨 승인 플로우로 게이팅됩니다.',
+       features:['고품질 오디오','Inpainting','Stems','라벨 승인 export'],
        pricing:'무료 · Pro $10/월', founded:'2024',
        users:['프로듀서','프로 뮤지션'],
-       why:'더 정교한 컨트롤 + <b>오디오 품질 정상급</b>. 프로 뮤지션 선호.',
+       why:'라벨 합의 후 <b>리믹스 도구로 재편</b>. 오디오 품질은 여전히 최상위권.',
        url:'https://www.udio.com'},
       {name:'Stable Audio', maker:'Stability AI · 영국', tag:'Open', scale:'OSS 가능', score:72,
        desc:'효과음·배경음 강자. 라이선스가 명확해 상업적 사용에 안전한 모델.',
@@ -1149,12 +1149,12 @@ const GLOBAL_DATA = [
   {
     kr:'캐릭터 / 일러스트', en:'Character & Concept',
     tools:[
-      {name:'Midjourney', maker:'Midjourney · 미국', tag:'v8.1', scale:'21M+ users', score:96,
-       desc:'아트 디렉션과 결의 통제력에서 정점. v8.1이 기본 모델로 승격되며 HD 2K가 표준이 됐습니다.',
-       features:['v8.1 Default','HD 2K','Character Ref','Niji'],
+      {name:'Midjourney', maker:'Midjourney · 미국', tag:'v8.2', scale:'21M+ users', score:96,
+       desc:'아트 디렉션과 결의 통제력에서 정점. 7/24 v8.2가 기본 모델로 승격되며 미학·개인화가 한층 정교해졌습니다.',
+       features:['v8.2 Default (7/24)','HD 2K','Character Ref','Niji'],
        pricing:'Basic $10/월~', founded:'2022',
        users:['광고 에이전시','영화 컨셉팀','일러스트레이터'],
-       why:'<b>아트 디렉션 1위</b>. v8.1 기본 승격 + 렌더 4~5배 가속.',
+       why:'<b>아트 디렉션 1위</b>. v8.2 기본 승격으로 더 대담하고 창의적인 결과물.',
        url:'https://www.midjourney.com'},
       {name:'Leonardo AI', maker:'Leonardo · 호주', tag:'Game', scale:'19M users', score:80,
        desc:'게임 에셋·캐릭터 시트에 특화. 학습된 스타일 모델을 빠르게 갈아끼울 수 있습니다.',
@@ -1175,19 +1175,19 @@ const GLOBAL_DATA = [
   {
     kr:'3D 모델링', en:'3D Modeling',
     tools:[
-      {name:'Meshy', maker:'Meshy · 미국', tag:'Text→Mesh', scale:'2M+ users', score:90,
-       desc:'텍스트나 이미지에서 PBR 텍스처가 입혀진 메시를 생성. 리토폴로지·리깅까지 한 도구에서 끝낼 수 있는 원스톱.',
-       features:['PBR Texture','Auto-Retopo','Auto-Rig','GLB/FBX'],
+      {name:'Meshy', maker:'Meshy · 미국', tag:'Meshy-6', scale:'2M+ users', score:91,
+       desc:'Meshy-6로 하드서피스 디테일·저폴리 워크플로·다색 3D 프린팅까지 확장. 5K~100K 폴리곤 범위 조절과 대칭 제어를 제공합니다.',
+       features:['Meshy-6','PBR Texture','Auto-Retopo/Rig','Multi-color Print'],
        pricing:'무료 · Pro $20/월', founded:'2023',
        users:['인디 게임','메타버스','3D 프린팅'],
-       why:'PBR 텍스처 + 토폴로지 정돈도 <b>동급 최고</b>. 게임·메타버스 빌더 1위.',
+       why:'Meshy-6 출시로 <b>지오메트리·리메시 정밀도 1위</b>. 게임·프린팅 빌더 표준.',
        url:'https://www.meshy.ai'},
-      {name:'Tripo', maker:'VAST · 중국', tag:'Solid 3D', scale:'500K+ MAU', score:74,
-       desc:'단단한 형태 생성에 강한 모델. 프로덕트 디자인·캐릭터 프로토타입에 가장 실용적인 결과물을 냅니다.',
-       features:['Solid Mesh','8s 생성','HD 디테일'],
+      {name:'Tripo', maker:'VAST · 중국', tag:'v3.1', scale:'500K+ MAU', score:76,
+       desc:'Tripo v3.1은 기본으로 PBR 재질을 켜주고 avoid 프롬프트까지 지원해 빠른 반복에 최적. GPT Image 2 연동으로 텍스트→이미지→3D 파이프라인이 매끄럽습니다.',
+       features:['v3.1 · PBR Default','avoid 프롬프트','GPT Image 2 연동','8s 생성'],
        pricing:'무료 시작', founded:'2024',
        users:['하드웨어 스타트업','3D 프린팅'],
-       why:'복잡 형상의 <b>토폴로지 정확도</b>가 강점. 무료 티어가 후함.',
+       why:'<b>가성비·반복 속도</b> 1위. GPT Image 2 통합으로 워크플로 단순.',
        url:'https://www.tripo3d.ai'},
       {name:'Luma Genie', maker:'Luma AI · 미국', tag:'Real-time', scale:'10s 생성', score:68,
        desc:'몇 초 만에 3D 자산을 만들고 GLB로 내려받는 가벼움. 빠른 컨셉 빌드와 AR 콘텐츠에 적합합니다.',
