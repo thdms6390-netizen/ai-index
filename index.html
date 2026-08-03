@@ -565,8 +565,8 @@
     </div>
 
     <div class="sidebar-foot">
-      <div class="row"><span>Updated</span><b id="sidebarUpdated">07 / 13</b></div>
-      <div class="row"><span>Next sync</span><b id="sidebarNextSync">07 / 20</b></div>
+      <div class="row"><span>Updated</span><b id="sidebarUpdated">08 / 03</b></div>
+      <div class="row"><span>Next sync</span><b id="sidebarNextSync">08 / 10</b></div>
       <div class="row"><span>Source</span><b>11 sites</b></div>
     </div>
   </aside>
@@ -623,8 +623,8 @@
         </div>
         <div class="kpi">
           <div class="lab"><span class="ic"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.39 0 4.68.94 6.36 2.64L21 8"/><polyline points="21 3 21 8 16 8"/></svg></span>마지막 업데이트</div>
-          <div class="v" style="font-size:24px" id="kpiUpdated">2026 · 07 · 13</div>
-          <div class="delta flat" id="kpiUpdatedDelta">Claude 자동 큐레이션 · 1주 주기 · 다음 7/20</div>
+          <div class="v" style="font-size:24px" id="kpiUpdated">2026 · 08 · 03</div>
+          <div class="delta flat" id="kpiUpdatedDelta">Claude 자동 큐레이션 · 1주 주기 · 다음 8/10</div>
           <svg class="spark" width="80" height="28" viewBox="0 0 80 28"><polyline fill="none" stroke="#a855f7" stroke-width="1.6" points="0,14 10,12 20,16 30,10 40,14 50,8 60,12 70,6 80,10"/></svg>
         </div>
       </div>
@@ -678,12 +678,12 @@ const KR_OVERRIDES = {
      users:['한국 직장인','학생','연구자'],
      why:'한국에서도 <b>가장 광범위한 사용자 기반</b>. 국내 직장인·학생의 사실상 표준.',
      url:'https://chatgpt.com'},
-    {name:'Claude', maker:'Anthropic · 미국', tag:'Long-context', scale:'전문가 선호', score:89,
-     desc:'긴 자료 처리와 글쓰기 품질이 압도적. Sonnet 5의 1M 컨텍스트로 한국 변호사·연구자가 메인으로 이동.',
-     features:['Opus 4.7','Sonnet 5 1M ctx','Artifacts','MCP'],
+    {name:'Claude', maker:'Anthropic · 미국', tag:'Opus 5', scale:'전문가 선호', score:90,
+     desc:'긴 자료 처리와 글쓰기 품질이 압도적. 7/24 Opus 5 출시로 한국 변호사·연구자·전략 컨설턴트의 메인 LLM으로 확립.',
+     features:['Opus 5','Sonnet 5 1M ctx','Artifacts','MCP'],
      pricing:'무료 · Pro $20 · Max $200', founded:'2021',
      users:['로펌','컨설팅','연구자'],
-     why:'<b>긴 한국어 문서 처리</b>가 ChatGPT보다 자연스러움. Sonnet 5 1M 컨텍스트로 가속.',
+     why:'<b>긴 한국어 문서 처리</b>가 ChatGPT보다 자연스러움. Opus 5 + Sonnet 5 1M 컨텍스트로 가속.',
      url:'https://claude.ai'},
     {name:'뤼튼 (Wrtn)', maker:'뤼튼테크놀로지스 · 한국', tag:'Korean AI', scale:'한국 700만+', score:81,
      desc:'한국 토종 올인원 AI 챗봇. 글쓰기·검색·캐릭터 대화까지 한국어에 최적화. 무료 사용량이 후합니다.',
@@ -837,19 +837,19 @@ const GLOBAL_DATA = [
   {
     kr:'코딩 / 개발', en:'Coding & Engineering',
     tools:[
-      {name:'Claude Code', maker:'Anthropic · 미국', tag:'Agentic CLI', scale:'$2.5B run rate', score:95,
-       desc:'터미널에서 작동하는 코딩 에이전트. 멀티파일 리팩터링·테스트 실행·PR 생성까지 한 흐름으로 처리합니다.',
-       features:['CLI Agent','MCP 통합','Opus 4.7','Hooks'],
+      {name:'Claude Code', maker:'Anthropic · 미국', tag:'Agentic CLI', scale:'$2.5B run rate', score:96,
+       desc:'터미널에서 작동하는 코딩 에이전트. Opus 5로 업그레이드되며 멀티파일 리팩터링·테스트 실행·PR 생성 품질이 한 단계 도약.',
+       features:['CLI Agent','MCP 통합','Opus 5','Hooks'],
        pricing:'Pro $20/월 · Max $200/월', founded:'2025',
        users:['Stripe','Replit','Vercel','Datadog'],
-       why:'Opus 4.7 기반 대형 코드베이스 처리 + <b>SWE-bench Pro 64%</b>로 동급 최고.',
+       why:'<b>Opus 5</b>(7/24 출시) 기반 프론티어 지능 + 1M 컨텍스트로 대형 코드베이스 처리 동급 최고.',
        url:'https://claude.com/claude-code'},
-      {name:'Cursor', maker:'Anysphere · 미국', tag:'AI IDE', scale:'$60B 가치', score:94,
-       desc:'VS Code 기반의 AI 에디터. 빠른 자동완성·컨텍스트 인식 채팅·에이전트 모드까지 일상 코딩에 최적.',
+      {name:'Cursor', maker:'Anysphere · 미국', tag:'AI IDE', scale:'$60B · Continue.dev 인수', score:94,
+       desc:'VS Code 기반의 AI 에디터. 7월 Continue.dev 팀·기술 인수로 확장 중. 빠른 자동완성·에이전트 모드까지 일상 코딩에 최적.',
        features:['AI Tab','Composer','Agent Mode','Codebase'],
        pricing:'무료 · Pro $20/월', founded:'2022',
        users:['OpenAI','Stripe','Shopify','Perplexity'],
-       why:'AI IDE <b>점유율 1위</b> · ARR $4B, SpaceX 인수. OpenAI·Stripe·Shopify 등 사내 표준.',
+       why:'AI IDE <b>점유율 1위</b> · ARR $4B, SpaceX 인수 + Continue.dev 인수로 오픈 코딩 확장.',
        url:'https://cursor.com'},
       {name:'GitHub Copilot', maker:'GitHub · 미국', tag:'Inline', scale:'4.7M 유료 · 42% 점유', score:86,
        desc:'가장 광범위하게 쓰이는 인라인 자동완성. 최근 Kimi K2.7 등 오픈웨이트 모델도 선택 가능해졌습니다.',
@@ -870,19 +870,19 @@ const GLOBAL_DATA = [
        users:['전 세계 직장인','학생','연구자'],
        why:'<b>주간 활성 사용자 10억 명</b> 돌파. 인류 역사상 가장 빠르게 성장한 소비자 제품.',
        url:'https://chatgpt.com'},
-      {name:'Claude', maker:'Anthropic · 미국', tag:'Opus 4.7', scale:'$380B 가치', score:92,
-       desc:'긴 자료를 통째로 읽고 일관성 있는 보고서를 써냅니다. 전략·법률·학술 문서에서 전문가들이 가장 선호하는 LLM.',
-       features:['Opus 4.7 (xhigh)','Sonnet 5 1M ctx','Artifacts','MCP'],
+      {name:'Claude', maker:'Anthropic · 미국', tag:'Opus 5', scale:'$380B 가치', score:93,
+       desc:'긴 자료를 통째로 읽고 일관성 있는 보고서를 써냅니다. Opus 5로 프론티어 지능이 한 단계 도약해 전략·법률·학술 문서에서 전문가층 선호도 최상.',
+       features:['Opus 5 (7/24 출시)','Sonnet 5 1M ctx','Artifacts','MCP'],
        pricing:'무료 · Pro $20 · Max $200', founded:'2021',
        users:['DoorDash','Bridgewater','Pfizer','LexisNexis'],
-       why:'<b>Opus 4.7 xhigh + Sonnet 5의 1M 컨텍스트</b>와 글쓰기 품질로 전문가층 압도적 선호.',
+       why:'<b>Opus 5 (Fable 5 수준 지능·½ 가격) + Sonnet 5 1M 컨텍스트</b>. 글쓰기 품질로 전문가층 압도적 선호.',
        url:'https://claude.ai'},
-      {name:'Notion AI', maker:'Notion · 미국', tag:'Workspace', scale:'100M+ users', score:82,
-       desc:'노션 문서·DB·노트 안에 통합된 AI. 워크스페이스를 떠나지 않고 작성·요약·검색까지 한 곳에서.',
-       features:['Q&A','Auto-fill','Summary','Translate'],
+      {name:'Notion AI', maker:'Notion · 미국', tag:'Workspace', scale:'100M+ users', score:83,
+       desc:'노션 문서·DB·노트 안에 통합된 AI. 7월 2.5 업데이트로 Workspace Mode·연결 DB/문서 컨텍스트가 대폭 강화됐습니다.',
+       features:['Workspace Mode','Custom Agents','PDF 분석','MCP 통합'],
        pricing:'Add-on $10/월', founded:'2016',
        users:['스타트업','리서치 팀','PM'],
-       why:'<b>노션 사용자 1억+</b>의 워크스페이스 안에 들어온 AI. 문서·DB·노트 통합.',
+       why:'<b>노션 사용자 1억+</b> 워크스페이스 안의 AI. 2.5 업데이트로 전체 워크스페이스 소싱 답변 가능.',
        url:'https://www.notion.com/product/ai'},
     ]
   },
@@ -916,11 +916,11 @@ const GLOBAL_DATA = [
     kr:'엑셀 / 시트', en:'Spreadsheet & Excel',
     tools:[
       {name:'Microsoft 365 Copilot', maker:'Microsoft · 미국', tag:'Native', scale:'20M+ 유료 시트', score:95,
-       desc:'엑셀에 기본 탑재된 AI. 시트를 읽고 차트·피벗·요약을 자동 생성하며 워크북 전체를 이해합니다.',
-       features:['Excel Native','Word/PPT 통합','기업 보안','Frontier Finance'],
+       desc:'엑셀에 기본 탑재된 AI. 7월 업데이트로 GPT-5.6 + Opus 5 두 모델을 그리드 안에서 선택하고, Power BI 데이터·인용까지 그라운딩합니다.',
+       features:['GPT-5.6 + Opus 5','Power BI 그라운딩','Brand-kit','Connectors'],
        pricing:'$30/월 (Office 365)', founded:'2023',
        users:['Goldman Sachs','삼성','Fortune 500'],
-       why:'<b>Fortune 500 90%+ 도입</b>. Office 환경의 사실상 표준.',
+       why:'<b>Fortune 500 90%+ 도입</b> + 프론티어 두 모델 그리드 통합. Office 환경의 사실상 표준.',
        url:'https://www.microsoft.com/microsoft-365/copilot'},
       {name:'Numerous.ai', maker:'Numerous · 미국', tag:'Add-on', scale:'200K+ users', score:72,
        desc:'구글 시트·엑셀에 붙는 AI 함수. =AI() 한 줄로 분류·태깅·요약을 셀 단위로 일괄 처리.',
@@ -981,12 +981,12 @@ const GLOBAL_DATA = [
        users:['일반 사용자','ChatGPT 사용자'],
        why:'<b>가장 넓은 사용자 기반</b>. ChatGPT 안에서 즉시 웹 검색.',
        url:'https://chatgpt.com'},
-      {name:'NotebookLM', maker:'Google · 미국', tag:'Doc Research', scale:'빠른 성장', score:80,
-       desc:'업로드한 문서 안에서만 답변. 환각이 적고 출처가 명확한 리서치 도구.',
+      {name:'Gemini Notebook', maker:'Google · 미국', tag:'Doc Research', scale:'빠른 성장', score:82,
+       desc:'7/16 NotebookLM에서 Gemini Notebook으로 리브랜드. 업로드한 문서 안에서만 답변해 환각이 적고 출처가 명확한 리서치 도구.',
        features:['Source-bound','Audio Overview','Notes','Mind Map'],
        pricing:'무료', founded:'2023',
        users:['연구자','학생','정책 분석가'],
-       why:'<b>업로드한 문서 안에서만</b> 답. 환각 적고 출처가 명확.',
+       why:'<b>업로드한 문서 안에서만</b> 답. Gemini 브랜드 통합으로 접근성 확대.',
        url:'https://notebooklm.google'},
     ]
   },
@@ -1149,12 +1149,12 @@ const GLOBAL_DATA = [
   {
     kr:'캐릭터 / 일러스트', en:'Character & Concept',
     tools:[
-      {name:'Midjourney', maker:'Midjourney · 미국', tag:'v8.1', scale:'21M+ users', score:96,
-       desc:'아트 디렉션과 결의 통제력에서 정점. v8.1이 기본 모델로 승격되며 HD 2K가 표준이 됐습니다.',
-       features:['v8.1 Default','HD 2K','Character Ref','Niji'],
+      {name:'Midjourney', maker:'Midjourney · 미국', tag:'v8.2', scale:'21M+ users', score:96,
+       desc:'아트 디렉션과 결의 통제력에서 정점. 7/24 v8.2가 기본 모델로 승격되며 미학·개인화 프로파일이 한층 진화.',
+       features:['v8.2 Default','HD 2K','Character Ref','Niji'],
        pricing:'Basic $10/월~', founded:'2022',
        users:['광고 에이전시','영화 컨셉팀','일러스트레이터'],
-       why:'<b>아트 디렉션 1위</b>. v8.1 기본 승격 + 렌더 4~5배 가속.',
+       why:'<b>아트 디렉션 1위</b>. v8.2 기본 승격으로 취향 이해·엣지 표현이 더 세련됨.',
        url:'https://www.midjourney.com'},
       {name:'Leonardo AI', maker:'Leonardo · 호주', tag:'Game', scale:'19M users', score:80,
        desc:'게임 에셋·캐릭터 시트에 특화. 학습된 스타일 모델을 빠르게 갈아끼울 수 있습니다.',
@@ -1175,12 +1175,12 @@ const GLOBAL_DATA = [
   {
     kr:'3D 모델링', en:'3D Modeling',
     tools:[
-      {name:'Meshy', maker:'Meshy · 미국', tag:'Text→Mesh', scale:'2M+ users', score:90,
-       desc:'텍스트나 이미지에서 PBR 텍스처가 입혀진 메시를 생성. 리토폴로지·리깅까지 한 도구에서 끝낼 수 있는 원스톱.',
+      {name:'Meshy', maker:'Meshy · 미국', tag:'Text→Mesh', scale:'12M users · $1.5B', score:92,
+       desc:'텍스트/이미지 → PBR 메시 생성의 표준. 7/21 $400M Series B ($1.5B 밸류)로 AI 3D가 실제 워크플로 인프라임을 증명.',
        features:['PBR Texture','Auto-Retopo','Auto-Rig','GLB/FBX'],
        pricing:'무료 · Pro $20/월', founded:'2023',
        users:['인디 게임','메타버스','3D 프린팅'],
-       why:'PBR 텍스처 + 토폴로지 정돈도 <b>동급 최고</b>. 게임·메타버스 빌더 1위.',
+       why:'12M 사용자·100M 모델 생성. <b>Series B $1.5B</b>로 AI 3D 카테고리 리더 확립.',
        url:'https://www.meshy.ai'},
       {name:'Tripo', maker:'VAST · 중국', tag:'Solid 3D', scale:'500K+ MAU', score:74,
        desc:'단단한 형태 생성에 강한 모델. 프로덕트 디자인·캐릭터 프로토타입에 가장 실용적인 결과물을 냅니다.',
