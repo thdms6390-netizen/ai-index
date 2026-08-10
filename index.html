@@ -565,8 +565,8 @@
     </div>
 
     <div class="sidebar-foot">
-      <div class="row"><span>Updated</span><b id="sidebarUpdated">07 / 13</b></div>
-      <div class="row"><span>Next sync</span><b id="sidebarNextSync">07 / 20</b></div>
+      <div class="row"><span>Updated</span><b id="sidebarUpdated">08 / 10</b></div>
+      <div class="row"><span>Next sync</span><b id="sidebarNextSync">08 / 17</b></div>
       <div class="row"><span>Source</span><b>11 sites</b></div>
     </div>
   </aside>
@@ -623,8 +623,8 @@
         </div>
         <div class="kpi">
           <div class="lab"><span class="ic"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.39 0 4.68.94 6.36 2.64L21 8"/><polyline points="21 3 21 8 16 8"/></svg></span>마지막 업데이트</div>
-          <div class="v" style="font-size:24px" id="kpiUpdated">2026 · 07 · 13</div>
-          <div class="delta flat" id="kpiUpdatedDelta">Claude 자동 큐레이션 · 1주 주기 · 다음 7/20</div>
+          <div class="v" style="font-size:24px" id="kpiUpdated">2026 · 08 · 10</div>
+          <div class="delta flat" id="kpiUpdatedDelta">Claude 자동 큐레이션 · 1주 주기 · 다음 8/17</div>
           <svg class="spark" width="80" height="28" viewBox="0 0 80 28"><polyline fill="none" stroke="#a855f7" stroke-width="1.6" points="0,14 10,12 20,16 30,10 40,14 50,8 60,12 70,6 80,10"/></svg>
         </div>
       </div>
@@ -678,12 +678,12 @@ const KR_OVERRIDES = {
      users:['한국 직장인','학생','연구자'],
      why:'한국에서도 <b>가장 광범위한 사용자 기반</b>. 국내 직장인·학생의 사실상 표준.',
      url:'https://chatgpt.com'},
-    {name:'Claude', maker:'Anthropic · 미국', tag:'Long-context', scale:'전문가 선호', score:89,
-     desc:'긴 자료 처리와 글쓰기 품질이 압도적. Sonnet 5의 1M 컨텍스트로 한국 변호사·연구자가 메인으로 이동.',
-     features:['Opus 4.7','Sonnet 5 1M ctx','Artifacts','MCP'],
+    {name:'Claude', maker:'Anthropic · 미국', tag:'Opus 5', scale:'전문가 선호', score:90,
+     desc:'긴 자료 처리와 글쓰기 품질이 압도적. Opus 5(1M ctx) + 5단계 effort 토글로 한국 변호사·연구자·컨설턴트의 메인 LLM.',
+     features:['Opus 5 (1M ctx)','5-level effort','Artifacts','MCP'],
      pricing:'무료 · Pro $20 · Max $200', founded:'2021',
      users:['로펌','컨설팅','연구자'],
-     why:'<b>긴 한국어 문서 처리</b>가 ChatGPT보다 자연스러움. Sonnet 5 1M 컨텍스트로 가속.',
+     why:'<b>긴 한국어 문서 처리</b>가 ChatGPT보다 자연스러움. Opus 5 = Fable 5급 지능을 절반 가격에.',
      url:'https://claude.ai'},
     {name:'뤼튼 (Wrtn)', maker:'뤼튼테크놀로지스 · 한국', tag:'Korean AI', scale:'한국 700만+', score:81,
      desc:'한국 토종 올인원 AI 챗봇. 글쓰기·검색·캐릭터 대화까지 한국어에 최적화. 무료 사용량이 후합니다.',
@@ -837,26 +837,26 @@ const GLOBAL_DATA = [
   {
     kr:'코딩 / 개발', en:'Coding & Engineering',
     tools:[
-      {name:'Claude Code', maker:'Anthropic · 미국', tag:'Agentic CLI', scale:'$2.5B run rate', score:95,
-       desc:'터미널에서 작동하는 코딩 에이전트. 멀티파일 리팩터링·테스트 실행·PR 생성까지 한 흐름으로 처리합니다.',
-       features:['CLI Agent','MCP 통합','Opus 4.7','Hooks'],
+      {name:'Claude Code', maker:'Anthropic · 미국', tag:'Agentic CLI', scale:'$3.5B run rate', score:96,
+       desc:'터미널에서 작동하는 코딩 에이전트. Opus 5 + 5단계 effort 토글로 멀티파일 리팩터링·테스트·PR 생성까지 한 흐름으로 처리.',
+       features:['CLI Agent','MCP 통합','Opus 5','5-level effort'],
        pricing:'Pro $20/월 · Max $200/월', founded:'2025',
        users:['Stripe','Replit','Vercel','Datadog'],
-       why:'Opus 4.7 기반 대형 코드베이스 처리 + <b>SWE-bench Pro 64%</b>로 동급 최고.',
+       why:'<b>Opus 5 (1M ctx) + 5단계 effort 토글</b>로 대형 코드베이스 처리력 재상승. JetBrains 서베이 최애 46%.',
        url:'https://claude.com/claude-code'},
-      {name:'Cursor', maker:'Anysphere · 미국', tag:'AI IDE', scale:'$60B 가치', score:94,
-       desc:'VS Code 기반의 AI 에디터. 빠른 자동완성·컨텍스트 인식 채팅·에이전트 모드까지 일상 코딩에 최적.',
+      {name:'Cursor', maker:'Anysphere · 미국', tag:'AI IDE', scale:'$60B · ARR $4B', score:94,
+       desc:'VS Code 기반의 AI 에디터. 빠른 자동완성·컨텍스트 인식 채팅·에이전트 모드까지 일상 코딩에 최적. SpaceX $60B 인수 Q3 마감 예정.',
        features:['AI Tab','Composer','Agent Mode','Codebase'],
        pricing:'무료 · Pro $20/월', founded:'2022',
        users:['OpenAI','Stripe','Shopify','Perplexity'],
-       why:'AI IDE <b>점유율 1위</b> · ARR $4B, SpaceX 인수. OpenAI·Stripe·Shopify 등 사내 표준.',
+       why:'AI IDE <b>점유율 1위</b> · ARR $4B, SpaceX $60B 인수(Q3 클로징). Fortune 500 60%+ 사용.',
        url:'https://cursor.com'},
-      {name:'GitHub Copilot', maker:'GitHub · 미국', tag:'Inline', scale:'4.7M 유료 · 42% 점유', score:86,
-       desc:'가장 광범위하게 쓰이는 인라인 자동완성. 최근 Kimi K2.7 등 오픈웨이트 모델도 선택 가능해졌습니다.',
+      {name:'GitHub Copilot', maker:'GitHub · 미국', tag:'Inline', scale:'20M+ users · 51% 점유', score:85,
+       desc:'가장 광범위하게 쓰이는 인라인 자동완성. Model Picker에 Claude/Gemini 등 다중 프론티어 모델까지 선택 가능.',
        features:['Inline Suggest','Chat','PR Review','Model Picker'],
        pricing:'$10/월 · Business $19', founded:'2021',
        users:['Microsoft','Accenture','Coca-Cola','BMW'],
-       why:'<b>Fortune 500 80%+ 도입</b>. 보안·컴플라이언스를 통과한 사실상 유일한 코딩 AI.',
+       why:'<b>Fortune 500 80%+ 도입</b>. Cursor·Claude Code에 점유율 잠식(67%→51%) 중이나 엔터프라이즈 저변은 여전히 압도적.',
        url:'https://github.com/features/copilot'},
     ]
   },
@@ -870,12 +870,12 @@ const GLOBAL_DATA = [
        users:['전 세계 직장인','학생','연구자'],
        why:'<b>주간 활성 사용자 10억 명</b> 돌파. 인류 역사상 가장 빠르게 성장한 소비자 제품.',
        url:'https://chatgpt.com'},
-      {name:'Claude', maker:'Anthropic · 미국', tag:'Opus 4.7', scale:'$380B 가치', score:92,
-       desc:'긴 자료를 통째로 읽고 일관성 있는 보고서를 써냅니다. 전략·법률·학술 문서에서 전문가들이 가장 선호하는 LLM.',
-       features:['Opus 4.7 (xhigh)','Sonnet 5 1M ctx','Artifacts','MCP'],
+      {name:'Claude', maker:'Anthropic · 미국', tag:'Opus 5', scale:'$380B 가치', score:93,
+       desc:'긴 자료를 통째로 읽고 일관성 있는 보고서를 써냅니다. Opus 5(1M ctx)와 5단계 effort 토글로 전략·법률·학술 문서에서 전문가층 압도적 선호.',
+       features:['Opus 5 (1M ctx)','5-level effort','Artifacts','MCP'],
        pricing:'무료 · Pro $20 · Max $200', founded:'2021',
        users:['DoorDash','Bridgewater','Pfizer','LexisNexis'],
-       why:'<b>Opus 4.7 xhigh + Sonnet 5의 1M 컨텍스트</b>와 글쓰기 품질로 전문가층 압도적 선호.',
+       why:'<b>Opus 5 = Fable 5급 지능을 절반 가격</b>. 5단계 effort로 비용·품질 조정, 긴 문서 처리 여전히 1위.',
        url:'https://claude.ai'},
       {name:'Notion AI', maker:'Notion · 미국', tag:'Workspace', scale:'100M+ users', score:82,
        desc:'노션 문서·DB·노트 안에 통합된 AI. 워크스페이스를 떠나지 않고 작성·요약·검색까지 한 곳에서.',
@@ -968,11 +968,11 @@ const GLOBAL_DATA = [
     kr:'검색 / 리서치', en:'Search & Research',
     tools:[
       {name:'Perplexity', maker:'Perplexity · 미국', tag:'AI Search', scale:'45M MAU · $22.6B', score:95,
-       desc:'출처 인용 + 정확도로 AI 검색의 표준이 된 도구. 학술·리서치 분야에서 1순위 선택.',
-       features:['Pro Search','Spaces','Sources','Comet Browser'],
+       desc:'출처 인용 + 정확도로 AI 검색의 표준. Comet 브라우저 무료화 + Chrome $34.5B 인수 제안까지, 검색 시장 재편 주도.',
+       features:['Pro Search','Comet Browser','Spaces','Sources'],
        pricing:'무료 · Pro $20/월', founded:'2022',
        users:['연구자','기자','학생'],
-       why:'<b>출처 인용 + 정확도</b>로 AI 검색의 표준. 월간 45M · ARR $450M로 급성장.',
+       why:'<b>출처 인용 + 정확도</b>로 AI 검색의 표준. Comet 브라우저 + Chrome $34.5B 인수 제안으로 검색 판도 재편 시도.',
        url:'https://www.perplexity.ai'},
       {name:'ChatGPT Search', maker:'OpenAI · 미국', tag:'Web', scale:'1B WAU', score:88,
        desc:'ChatGPT 안에서 즉시 웹 검색. 가장 넓은 사용자 기반과 통합 환경이 강점.',
@@ -1026,12 +1026,12 @@ const GLOBAL_DATA = [
        users:['학생','SMB','마케터','교사'],
        why:'<b>월 2.2억 명</b>이 쓰는 그래픽 도구. 비전공자 디자인 1위.',
        url:'https://www.canva.com/ai/'},
-      {name:'Figma Make', maker:'Figma · 미국', tag:'Native', scale:'13M users', score:92,
-       desc:'피그마 안에 들어온 AI. 브리프 한 줄에서 UI 시안과 컴포넌트, 코드까지 한 번에.',
-       features:['Make UI','Code Export','Variants','Auto-layout'],
+      {name:'Figma Make', maker:'Figma · 미국', tag:'Native', scale:'13M users', score:93,
+       desc:'피그마 안에 들어온 AI. 7/30 업데이트로 요소 선택→속성 패널 편집·in-context 주석까지 지원. 브리프 한 줄에서 UI·컴포넌트·코드까지.',
+       features:['Visual Editing','Annotations','Code Export','Nested Folders'],
        pricing:'Figma Pro $15/월~', founded:'2012',
        users:['Microsoft','Uber','Airbnb','삼성'],
-       why:'<b>피그마 안에 통합</b>되어 마찰 0. 전 세계 디자이너 표준 도구의 AI.',
+       why:'<b>Visual Editing + 주석 프롬프트</b>로 디자인↔코드 왕복 마찰 최소화. 전 세계 디자이너 표준의 AI.',
        url:'https://www.figma.com/make'},
       {name:'Framer AI', maker:'Framer · 네덜란드', tag:'Web', scale:'500K sites', score:78,
        desc:'프롬프트로 반응형 랜딩페이지를 즉시 배포. 빠른 마케팅 사이트에 가장 적합합니다.',
@@ -1046,11 +1046,11 @@ const GLOBAL_DATA = [
     kr:'이미지 편집', en:'Image Editing',
     tools:[
       {name:'Photoshop AI', maker:'Adobe · 미국', tag:'Pro Editor', scale:'30M+ users', score:96,
-       desc:'Firefly AI Assistant 베타로 대화형 편집이 표준화. 25+ 외부 모델(Nano Banana 2·Flux.2·GPT Image 2)도 함께 선택 가능.',
-       features:['AI Assistant','Generative Fill','25+ 외부 모델','Neural Filters'],
+       desc:'Firefly AI Assistant로 대화형 편집이 표준화. 25+ 외부 모델(Nano Banana Pro·Flux.2·GPT Image 2)을 한 캔버스에서 선택.',
+       features:['AI Assistant','Generative Fill','Nano Banana Pro','Neural Filters'],
        pricing:'$22.99/월 (Photo Plan)', founded:'1990',
        users:['광고 에이전시','포토그래퍼','디자이너'],
-       why:'<b>대화형 편집 + 외부 모델 허브</b>화로 프로 워크플로 1위 재확립.',
+       why:'<b>대화형 편집 + 외부 모델 허브</b>화로 프로 워크플로 1위 재확립. Nano Banana Pro 통합으로 이미지 편집 품질 상승.',
        url:'https://www.adobe.com/products/photoshop.html'},
       {name:'Magnific', maker:'Magnific · 스페인', tag:'Upscaler', scale:'$50M ARR', score:84,
        desc:'업스케일링 + 디테일 향상 1위. 저해상도를 8K급으로 끌어올리며 디테일을 자연스럽게 추가.',
@@ -1123,12 +1123,12 @@ const GLOBAL_DATA = [
   {
     kr:'음악 / 노래 생성', en:'Music Generation',
     tools:[
-      {name:'Suno', maker:'Suno · 미국', tag:'Vocal+Music', scale:'12M+ users', score:96,
-       desc:'보컬·가사·멜로디 품질이 압도적 1위. Studio DAW·Generative Stems·Vocal Personas까지 창작 파이프라인 완성.',
-       features:['v5 + Studio DAW','12-track Stems','Vocal Personas','44.1kHz'],
+      {name:'Suno', maker:'Suno · 미국', tag:'v5.5', scale:'15M+ users', score:96,
+       desc:'보컬·가사·멜로디 품질이 압도적 1위. v5.5의 Voices(보이스 클로닝) + Studio DAW + Custom Model 파인튜닝으로 창작 파이프라인 완성.',
+       features:['v5.5 + Voices','Studio DAW','Custom Fine-tune','12-track Stems'],
        pricing:'무료 · Pro $8/월', founded:'2023',
        users:['인디 뮤지션','TikTok 크리에이터'],
-       why:'ELO 1293으로 <b>경쟁 모델 압도</b>. 한국어 가사도 자연스러움.',
+       why:'<b>보컬 표현력 · 속도 · 기능 종합 1위</b>. v5.5 Voices로 보이스 클로닝 진입, 한국어 가사도 자연스러움.',
        url:'https://suno.com'},
       {name:'Udio', maker:'Udio · 미국', tag:'Pro Audio', scale:'1M+ users', score:84,
        desc:'더 정교한 컨트롤 + 오디오 품질 정상급. 프로 뮤지션·프로듀서들이 선호합니다.',
