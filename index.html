@@ -565,8 +565,8 @@
     </div>
 
     <div class="sidebar-foot">
-      <div class="row"><span>Updated</span><b id="sidebarUpdated">08 / 10</b></div>
-      <div class="row"><span>Next sync</span><b id="sidebarNextSync">08 / 17</b></div>
+      <div class="row"><span>Updated</span><b id="sidebarUpdated">08 / 17</b></div>
+      <div class="row"><span>Next sync</span><b id="sidebarNextSync">08 / 24</b></div>
       <div class="row"><span>Source</span><b>11 sites</b></div>
     </div>
   </aside>
@@ -623,8 +623,8 @@
         </div>
         <div class="kpi">
           <div class="lab"><span class="ic"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.39 0 4.68.94 6.36 2.64L21 8"/><polyline points="21 3 21 8 16 8"/></svg></span>마지막 업데이트</div>
-          <div class="v" style="font-size:24px" id="kpiUpdated">2026 · 08 · 10</div>
-          <div class="delta flat" id="kpiUpdatedDelta">Claude 자동 큐레이션 · 1주 주기 · 다음 8/17</div>
+          <div class="v" style="font-size:24px" id="kpiUpdated">2026 · 08 · 17</div>
+          <div class="delta flat" id="kpiUpdatedDelta">Claude 자동 큐레이션 · 1주 주기 · 다음 8/24</div>
           <svg class="spark" width="80" height="28" viewBox="0 0 80 28"><polyline fill="none" stroke="#a855f7" stroke-width="1.6" points="0,14 10,12 20,16 30,10 40,14 50,8 60,12 70,6 80,10"/></svg>
         </div>
       </div>
@@ -685,12 +685,12 @@ const KR_OVERRIDES = {
      users:['로펌','컨설팅','연구자'],
      why:'<b>긴 한국어 문서 처리</b>가 ChatGPT보다 자연스러움. Opus 5 = Fable 5급 지능을 절반 가격에.',
      url:'https://claude.ai'},
-    {name:'뤼튼 (Wrtn)', maker:'뤼튼테크놀로지스 · 한국', tag:'Korean AI', scale:'한국 700만+', score:81,
-     desc:'한국 토종 올인원 AI 챗봇. 글쓰기·검색·캐릭터 대화까지 한국어에 최적화. 무료 사용량이 후합니다.',
-     features:['한국어 특화','GPT-5.6 탑재','이미지 생성','번역'],
+    {name:'뤼튼 (Wrtn)', maker:'뤼튼테크놀로지스 · 한국', tag:'Korean AI', scale:'ARR $100M · 700만+', score:82,
+     desc:'한국 토종 올인원 AI 챗봇. 글쓰기·검색·캐릭터 대화까지 한국어에 최적화. 스토리 서비스 "크랙"이 일본까지 확장 중.',
+     features:['한국어 특화','GPT-5.6 탑재','크랙(스토리)','이미지 생성'],
      pricing:'무료', founded:'2021',
      users:['한국 학생','일반 사용자','직장인'],
-     why:'<b>한국어 최적화 1위</b>. GPT-5.6 기반 라이프스타일 AI + 한국 콘텐츠 친화적.',
+     why:'<b>한국어 AI 1위 + ARR $100M 돌파</b>. 크랙(스토리 서비스)·일본 진출·2028 IPO 목표.',
      url:'https://wrtn.ai'},
   ],
   'PPT / 슬라이드': [
@@ -844,12 +844,12 @@ const GLOBAL_DATA = [
        users:['Stripe','Replit','Vercel','Datadog'],
        why:'<b>Opus 5 (1M ctx) + 5단계 effort 토글</b>로 대형 코드베이스 처리력 재상승. JetBrains 서베이 최애 46%.',
        url:'https://claude.com/claude-code'},
-      {name:'Cursor', maker:'Anysphere · 미국', tag:'AI IDE', scale:'$60B · ARR $4B', score:94,
-       desc:'VS Code 기반의 AI 에디터. 빠른 자동완성·컨텍스트 인식 채팅·에이전트 모드까지 일상 코딩에 최적. SpaceX $60B 인수 Q3 마감 예정.',
-       features:['AI Tab','Composer','Agent Mode','Codebase'],
+      {name:'Cursor', maker:'SpaceXAI (구 Anysphere) · 미국', tag:'AI IDE', scale:'SpaceX $60B 인수 완료', score:94,
+       desc:'VS Code 기반의 AI 에디터. 8/14 SpaceX $60B 인수 클로징 · Colossus 슈퍼컴퓨터·Grok 통합으로 SpaceXAI 산하 편입. 자동완성·에이전트 모드 여전히 IDE 표준.',
+       features:['AI Tab','Composer','Agent Mode','Grok 통합'],
        pricing:'무료 · Pro $20/월', founded:'2022',
        users:['OpenAI','Stripe','Shopify','Perplexity'],
-       why:'AI IDE <b>점유율 1위</b> · ARR $4B, SpaceX $60B 인수(Q3 클로징). Fortune 500 60%+ 사용.',
+       why:'AI IDE <b>점유율 1위</b> · ARR $4B, <b>SpaceX $60B 인수 8/14 클로징</b>(사상 최대 스타트업 인수). Fortune 500 60%+ 사용.',
        url:'https://cursor.com'},
       {name:'GitHub Copilot', maker:'GitHub · 미국', tag:'Inline', scale:'20M+ users · 51% 점유', score:85,
        desc:'가장 광범위하게 쓰이는 인라인 자동완성. Model Picker에 Claude/Gemini 등 다중 프론티어 모델까지 선택 가능.',
@@ -864,37 +864,37 @@ const GLOBAL_DATA = [
     kr:'기획서 / 문서', en:'Documents & Reports',
     tools:[
       {name:'ChatGPT', maker:'OpenAI · 미국', tag:'All-round', scale:'1B+ WAU', score:99,
-       desc:'기획서 초안부터 리서치, 표·다이어그램 생성까지. 실무에서 가장 먼저 열어보는 LLM이자 사실상의 표준.',
-       features:['GPT-5.6 Sol/Terra/Luna','Code Interpreter','DALL-E 3','Memory'],
+       desc:'기획서 초안부터 리서치, 표·다이어그램 생성까지. 8/7부터 GPT-5.6 Luna가 무료·Go 티어에서 무제한 텍스트 채팅으로 전환.',
+       features:['GPT-5.6 Sol/Terra/Luna','Luna 무제한(무료)','Code Interpreter','Memory'],
        pricing:'무료 · Plus $20 · Pro $200', founded:'2022',
        users:['전 세계 직장인','학생','연구자'],
        why:'<b>주간 활성 사용자 10억 명</b> 돌파. 인류 역사상 가장 빠르게 성장한 소비자 제품.',
        url:'https://chatgpt.com'},
-      {name:'Claude', maker:'Anthropic · 미국', tag:'Opus 5', scale:'$380B 가치', score:93,
+      {name:'Claude', maker:'Anthropic · 미국', tag:'Opus 5', scale:'$965B · S-1 제출', score:93,
        desc:'긴 자료를 통째로 읽고 일관성 있는 보고서를 써냅니다. Opus 5(1M ctx)와 5단계 effort 토글로 전략·법률·학술 문서에서 전문가층 압도적 선호.',
        features:['Opus 5 (1M ctx)','5-level effort','Artifacts','MCP'],
        pricing:'무료 · Pro $20 · Max $200', founded:'2021',
        users:['DoorDash','Bridgewater','Pfizer','LexisNexis'],
-       why:'<b>Opus 5 = Fable 5급 지능을 절반 가격</b>. 5단계 effort로 비용·품질 조정, 긴 문서 처리 여전히 1위.',
+       why:'<b>Series H $965B 가치</b>로 OpenAI 추월 · S-1 초안 제출로 IPO 시동. Opus 5 = Fable 5급 지능을 절반 가격.',
        url:'https://claude.ai'},
-      {name:'Notion AI', maker:'Notion · 미국', tag:'Workspace', scale:'100M+ users', score:82,
-       desc:'노션 문서·DB·노트 안에 통합된 AI. 워크스페이스를 떠나지 않고 작성·요약·검색까지 한 곳에서.',
-       features:['Q&A','Auto-fill','Summary','Translate'],
+      {name:'Notion AI', maker:'Notion · 미국', tag:'Custom Agents', scale:'100M+ users', score:83,
+       desc:'노션 문서·DB·노트 안에 통합된 AI. 8월 신규 Custom Agent 트리거로 회의록 완료 후 트래커 자동 갱신·Slack 리캡·티켓 발행까지 자동화.',
+       features:['Custom Agent 트리거','Meeting AI','Q&A','Notion Workers'],
        pricing:'Add-on $10/월', founded:'2016',
        users:['스타트업','리서치 팀','PM'],
-       why:'<b>노션 사용자 1억+</b>의 워크스페이스 안에 들어온 AI. 문서·DB·노트 통합.',
+       why:'<b>Custom Agent 트리거</b>로 회의 후 워크플로 자동 실행. 8월 Notion Workers 예고로 워크스페이스 자동화 확장.',
        url:'https://www.notion.com/product/ai'},
     ]
   },
   {
     kr:'PPT / 슬라이드', en:'Presentations',
     tools:[
-      {name:'Gamma', maker:'Gamma · 미국', tag:'AI Deck', scale:'70M+ users', score:94,
-       desc:'한 줄 프롬프트로 발표용 슬라이드 한 벌. 신규 Gamma Imagine으로 마케팅 이미지·인포그래픽까지 확장.',
-       features:['AI Deck','Gamma Imagine','Web Page','Themes'],
+      {name:'Gamma', maker:'Gamma · 미국', tag:'Gamma 3.0 Agent', scale:'70M+ users', score:95,
+       desc:'한 줄 프롬프트로 발표용 슬라이드 한 벌. 3.0 Agent가 "코퍼레이트하게 바꿔줘"·"경쟁사 슬라이드 추가" 같은 대화로 덱을 재구성. 재생성 없이 부분 편집.',
+       features:['Gamma 3.0 Agent','AI Deck','Gamma Imagine','Web Page'],
        pricing:'무료 · Plus $10/월', founded:'2020',
        users:['스타트업','학교','교육 현장'],
-       why:'한 줄 프롬프트로 <b>발표자료 한 벌</b>. AI 슬라이드 사용자 수 1위 + 이미지 생성 확장.',
+       why:'<b>Gamma 3.0 Agent</b>로 대화형 편집 표준화 · AI 슬라이드 사용자 수 1위 유지, 유료 티어 무제한 생성으로 개편.',
        url:'https://gamma.app'},
       {name:'Tome', maker:'Tome · 미국', tag:'Storytelling', scale:'10M+ users', score:78,
        desc:'스토리텔링 중심 슬라이드. 스타트업 피칭과 세일즈 데크에 자주 사용됩니다.',
@@ -941,12 +941,12 @@ const GLOBAL_DATA = [
   {
     kr:'회의록 / 노트', en:'Meeting Notes',
     tools:[
-      {name:'Otter.ai', maker:'Otter · 미국', tag:'Meetings', scale:'25M+ users', score:92,
-       desc:'음성 → 텍스트 회의록 변환의 사실상 표준. Knowledge Engine·MCP·5개 AI Agent로 회의를 자산화.',
-       features:['자동 회의록','MCP 지원','AI Agents','Gmail/Notion 연동'],
+      {name:'Otter.ai', maker:'Otter · 미국', tag:'Meeting Agents', scale:'25M+ users', score:93,
+       desc:'음성 → 텍스트 회의록 변환의 사실상 표준. Meeting Agents가 회의에 직접 참여해 질문에 답변·작업 수행까지 처리. Notion 워크스페이스와도 직접 연동.',
+       features:['Meeting Agents','MCP 지원','Notion 직결','Salesforce/HubSpot'],
        pricing:'무료 · Pro $17/월', founded:'2016',
        users:['기업 미팅','기자','대학원생'],
-       why:'음성 → 텍스트 회의록의 <b>사실상 표준</b> + MCP·에이전트로 워크플로 자동화.',
+       why:'회의록의 <b>사실상 표준</b> + <b>Meeting Agents</b>로 회의에 직접 참여하는 AI 표준.',
        url:'https://otter.ai'},
       {name:'Fireflies', maker:'Fireflies · 미국', tag:'Auto-Bot', scale:'500K+ teams', score:82,
        desc:'화상회의 자동 참석 + 요약. 영업·CS 팀의 워크플로에서 폭발적으로 사용됩니다.',
@@ -1149,12 +1149,12 @@ const GLOBAL_DATA = [
   {
     kr:'캐릭터 / 일러스트', en:'Character & Concept',
     tools:[
-      {name:'Midjourney', maker:'Midjourney · 미국', tag:'v8.1', scale:'21M+ users', score:96,
-       desc:'아트 디렉션과 결의 통제력에서 정점. v8.1이 기본 모델로 승격되며 HD 2K가 표준이 됐습니다.',
-       features:['v8.1 Default','HD 2K','Character Ref','Niji'],
+      {name:'Midjourney', maker:'Midjourney · 미국', tag:'v8.2', scale:'21M+ users', score:96,
+       desc:'아트 디렉션과 결의 통제력에서 정점. 7/24 v8.2가 기본으로 승격, 심미성·이미지 품질·Personalization이 크게 향상됐습니다.',
+       features:['v8.2 Default','HD 2K','Personalization','Niji'],
        pricing:'Basic $10/월~', founded:'2022',
        users:['광고 에이전시','영화 컨셉팀','일러스트레이터'],
-       why:'<b>아트 디렉션 1위</b>. v8.1 기본 승격 + 렌더 4~5배 가속.',
+       why:'<b>아트 디렉션 1위</b>. v8.2 기본 승격 + Personalization 강화로 취향 학습 정확도 상승.',
        url:'https://www.midjourney.com'},
       {name:'Leonardo AI', maker:'Leonardo · 호주', tag:'Game', scale:'19M users', score:80,
        desc:'게임 에셋·캐릭터 시트에 특화. 학습된 스타일 모델을 빠르게 갈아끼울 수 있습니다.',
