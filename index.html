@@ -565,8 +565,8 @@
     </div>
 
     <div class="sidebar-foot">
-      <div class="row"><span>Updated</span><b id="sidebarUpdated">08 / 17</b></div>
-      <div class="row"><span>Next sync</span><b id="sidebarNextSync">08 / 24</b></div>
+      <div class="row"><span>Updated</span><b id="sidebarUpdated">08 / 24</b></div>
+      <div class="row"><span>Next sync</span><b id="sidebarNextSync">08 / 31</b></div>
       <div class="row"><span>Source</span><b>11 sites</b></div>
     </div>
   </aside>
@@ -623,8 +623,8 @@
         </div>
         <div class="kpi">
           <div class="lab"><span class="ic"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.39 0 4.68.94 6.36 2.64L21 8"/><polyline points="21 3 21 8 16 8"/></svg></span>마지막 업데이트</div>
-          <div class="v" style="font-size:24px" id="kpiUpdated">2026 · 08 · 17</div>
-          <div class="delta flat" id="kpiUpdatedDelta">Claude 자동 큐레이션 · 1주 주기 · 다음 8/24</div>
+          <div class="v" style="font-size:24px" id="kpiUpdated">2026 · 08 · 24</div>
+          <div class="delta flat" id="kpiUpdatedDelta">Claude 자동 큐레이션 · 1주 주기 · 다음 8/31</div>
           <svg class="spark" width="80" height="28" viewBox="0 0 80 28"><polyline fill="none" stroke="#a855f7" stroke-width="1.6" points="0,14 10,12 20,16 30,10 40,14 50,8 60,12 70,6 80,10"/></svg>
         </div>
       </div>
@@ -678,12 +678,12 @@ const KR_OVERRIDES = {
      users:['한국 직장인','학생','연구자'],
      why:'한국에서도 <b>가장 광범위한 사용자 기반</b>. 국내 직장인·학생의 사실상 표준.',
      url:'https://chatgpt.com'},
-    {name:'Claude', maker:'Anthropic · 미국', tag:'Opus 5', scale:'전문가 선호', score:90,
-     desc:'긴 자료 처리와 글쓰기 품질이 압도적. Opus 5(1M ctx) + 5단계 effort 토글로 한국 변호사·연구자·컨설턴트의 메인 LLM.',
-     features:['Opus 5 (1M ctx)','5-level effort','Artifacts','MCP'],
+    {name:'Claude', maker:'Anthropic · 미국', tag:'Opus 5', scale:'전문가 선호 · IPO 임박', score:91,
+     desc:'긴 자료 처리와 글쓰기 품질이 압도적. Opus 5(1M ctx) + 5단계 effort 토글로 한국 변호사·연구자·컨설턴트의 메인 LLM. 8월 말 공개 S-1 제출 예정으로 $2T IPO 카운트다운.',
+     features:['Opus 5 (1M ctx)','5-level effort','Artifacts','EU 워터마크'],
      pricing:'무료 · Pro $20 · Max $200', founded:'2021',
      users:['로펌','컨설팅','연구자'],
-     why:'<b>긴 한국어 문서 처리</b>가 ChatGPT보다 자연스러움. Opus 5 = Fable 5급 지능을 절반 가격에.',
+     why:'<b>긴 한국어 문서 처리</b>가 ChatGPT보다 자연스러움 · 8월 말 공개 S-1로 $2T IPO 시동, 한국 프리IPO 관심 급증.',
      url:'https://claude.ai'},
     {name:'뤼튼 (Wrtn)', maker:'뤼튼테크놀로지스 · 한국', tag:'Korean AI', scale:'ARR $100M · 700만+', score:82,
      desc:'한국 토종 올인원 AI 챗봇. 글쓰기·검색·캐릭터 대화까지 한국어에 최적화. 스토리 서비스 "크랙"이 일본까지 확장 중.',
@@ -864,18 +864,18 @@ const GLOBAL_DATA = [
     kr:'기획서 / 문서', en:'Documents & Reports',
     tools:[
       {name:'ChatGPT', maker:'OpenAI · 미국', tag:'All-round', scale:'1B+ WAU', score:99,
-       desc:'기획서 초안부터 리서치, 표·다이어그램 생성까지. 8/7부터 GPT-5.6 Luna가 무료·Go 티어에서 무제한 텍스트 채팅으로 전환.',
-       features:['GPT-5.6 Sol/Terra/Luna','Luna 무제한(무료)','Code Interpreter','Memory'],
+       desc:'기획서 초안부터 리서치, 표·다이어그램 생성까지. 8/21 GPT-5.6 Sol API·크레딧 가격 3개월 -20% 인하 · Instant와 reasoning 모델을 Sol 단일 experience + effort 슬라이더로 통합.',
+       features:['GPT-5.6 Sol/Terra/Luna','Sol -20% (3개월)','effort 슬라이더','Luna 무제한(무료)'],
        pricing:'무료 · Plus $20 · Pro $200', founded:'2022',
        users:['전 세계 직장인','학생','연구자'],
-       why:'<b>주간 활성 사용자 10억 명</b> 돌파. 인류 역사상 가장 빠르게 성장한 소비자 제품.',
+       why:'<b>주간 활성 사용자 10억 명</b> 돌파. 8/21 API 가격 20% 인하로 개발자·기업 시장 방어. o3는 8/26 은퇴.',
        url:'https://chatgpt.com'},
-      {name:'Claude', maker:'Anthropic · 미국', tag:'Opus 5', scale:'$965B · S-1 제출', score:93,
-       desc:'긴 자료를 통째로 읽고 일관성 있는 보고서를 써냅니다. Opus 5(1M ctx)와 5단계 effort 토글로 전략·법률·학술 문서에서 전문가층 압도적 선호.',
-       features:['Opus 5 (1M ctx)','5-level effort','Artifacts','MCP'],
+      {name:'Claude', maker:'Anthropic · 미국', tag:'Opus 5', scale:'IPO 목표 $2T · S-1 공개 임박', score:94,
+       desc:'긴 자료를 통째로 읽고 일관성 있는 보고서를 써냅니다. Opus 5(1M ctx)와 5단계 effort 토글로 전략·법률·학술 문서에서 전문가층 압도적 선호. 8월 말 공개 S-1 제출 예정으로 10월 IPO 카운트다운.',
+       features:['Opus 5 (1M ctx)','5-level effort','Artifacts','EU AI Act 워터마크'],
        pricing:'무료 · Pro $20 · Max $200', founded:'2021',
        users:['DoorDash','Bridgewater','Pfizer','LexisNexis'],
-       why:'<b>Series H $965B 가치</b>로 OpenAI 추월 · S-1 초안 제출로 IPO 시동. Opus 5 = Fable 5급 지능을 절반 가격.',
+       why:'<b>IPO 목표 $2T · 크립토 시장 함의 $1.6T</b> — 사상 최대 IPO 시도. ARR $65B 돌파, 연말 $100~120B 전망.',
        url:'https://claude.ai'},
       {name:'Notion AI', maker:'Notion · 미국', tag:'Custom Agents', scale:'100M+ users', score:83,
        desc:'노션 문서·DB·노트 안에 통합된 AI. 8월 신규 Custom Agent 트리거로 회의록 완료 후 트래커 자동 갱신·Slack 리캡·티켓 발행까지 자동화.',
@@ -1097,12 +1097,12 @@ const GLOBAL_DATA = [
   {
     kr:'TTS / 음성', en:'Voice & Speech',
     tools:[
-      {name:'ElevenLabs', maker:'ElevenLabs · 영국', tag:'Studio', scale:'$11B 가치', score:97,
-       desc:'30개국 이상 언어, 풍부한 감정 표현. Music v2까지 합류해 음성 + 음악을 한 스튜디오에서.',
-       features:['30+ 언어','Voice Clone','Music v2','Dubbing'],
+      {name:'ElevenLabs', maker:'ElevenLabs · 영국', tag:'Studio', scale:'$11B · Revolut/Klarna/Stripe', score:97,
+       desc:'30개국 이상 언어, 풍부한 감정 표현. ElevenAgents/Creative/API 3축 재편 + Ominimo 콜센터 파트너십으로 엔터프라이즈 음성 표준으로 이동. Speech Engine 실시간 음성까지 지원.',
+       features:['Speech Engine (실시간)','ElevenAgents','Music v2','Dubbing'],
        pricing:'무료 · Creator $5/월~', founded:'2022',
-       users:['HBO','Disney','NYT','Audible'],
-       why:'<b>HBO·Disney·NYT</b> 등 미디어 표준. Music v2 + 요금 50% 인하로 확장 중.',
+       users:['HBO','Disney','NYT','Revolut','Klarna'],
+       why:'<b>미디어 + 핀테크 콜센터</b> 표준으로 확장. Revolut·Klarna·Stripe 음성 인프라 채택으로 엔터프라이즈 매출 급성장.',
        url:'https://elevenlabs.io'},
       {name:'Murf', maker:'Murf · 인도/미국', tag:'Pro', scale:'4M+ users', score:74,
        desc:'기업·교육 콘텐츠에 적합한 깔끔한 보이스. 워크스페이스 협업 기능이 강점입니다.',
@@ -1123,12 +1123,12 @@ const GLOBAL_DATA = [
   {
     kr:'음악 / 노래 생성', en:'Music Generation',
     tools:[
-      {name:'Suno', maker:'Suno · 미국', tag:'v5.5', scale:'15M+ users', score:96,
-       desc:'보컬·가사·멜로디 품질이 압도적 1위. v5.5의 Voices(보이스 클로닝) + Studio DAW + Custom Model 파인튜닝으로 창작 파이프라인 완성.',
-       features:['v5.5 + Voices','Studio DAW','Custom Fine-tune','12-track Stems'],
+      {name:'Suno', maker:'Suno · 미국', tag:'v5.5', scale:'15M+ users · BMG 라이선스', score:96,
+       desc:'보컬·가사·멜로디 품질이 압도적 1위. 8/12 BMG 라이선스 계약 + 워터마킹/다운로드 캡 도입 · Suno Vinyl($45)로 물리 매체 확장. v5.5 Voices + Studio DAW로 창작 파이프라인 완성.',
+       features:['v5.5 + Voices','Studio DAW','BMG 라이선스','워터마킹'],
        pricing:'무료 · Pro $8/월', founded:'2023',
        users:['인디 뮤지션','TikTok 크리에이터'],
-       why:'<b>보컬 표현력 · 속도 · 기능 종합 1위</b>. v5.5 Voices로 보이스 클로닝 진입, 한국어 가사도 자연스러움.',
+       why:'<b>보컬 표현력 · 속도 · 기능 종합 1위</b>. 두 번째 메이저 레이블 계약(BMG) + 워터마킹으로 저작권 리스크 완화, 상업 사용 안정성 강화.',
        url:'https://suno.com'},
       {name:'Udio', maker:'Udio · 미국', tag:'Pro Audio', scale:'1M+ users', score:84,
        desc:'더 정교한 컨트롤 + 오디오 품질 정상급. 프로 뮤지션·프로듀서들이 선호합니다.',
