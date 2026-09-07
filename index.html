@@ -565,8 +565,8 @@
     </div>
 
     <div class="sidebar-foot">
-      <div class="row"><span>Updated</span><b id="sidebarUpdated">08 / 17</b></div>
-      <div class="row"><span>Next sync</span><b id="sidebarNextSync">08 / 24</b></div>
+      <div class="row"><span>Updated</span><b id="sidebarUpdated">09 / 07</b></div>
+      <div class="row"><span>Next sync</span><b id="sidebarNextSync">09 / 14</b></div>
       <div class="row"><span>Source</span><b>11 sites</b></div>
     </div>
   </aside>
@@ -623,8 +623,8 @@
         </div>
         <div class="kpi">
           <div class="lab"><span class="ic"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.39 0 4.68.94 6.36 2.64L21 8"/><polyline points="21 3 21 8 16 8"/></svg></span>마지막 업데이트</div>
-          <div class="v" style="font-size:24px" id="kpiUpdated">2026 · 08 · 17</div>
-          <div class="delta flat" id="kpiUpdatedDelta">Claude 자동 큐레이션 · 1주 주기 · 다음 8/24</div>
+          <div class="v" style="font-size:24px" id="kpiUpdated">2026 · 09 · 07</div>
+          <div class="delta flat" id="kpiUpdatedDelta">Claude 자동 큐레이션 · 1주 주기 · 다음 9/14</div>
           <svg class="spark" width="80" height="28" viewBox="0 0 80 28"><polyline fill="none" stroke="#a855f7" stroke-width="1.6" points="0,14 10,12 20,16 30,10 40,14 50,8 60,12 70,6 80,10"/></svg>
         </div>
       </div>
@@ -671,23 +671,23 @@ const C = ['--c1','--c2','--c3','--c4','--c5','--c6','--c7','--c8','--c9','--c10
 
 const KR_OVERRIDES = {
   '기획서 / 문서': [
-    {name:'ChatGPT', maker:'OpenAI · 미국', tag:'All-round', scale:'한국 점유율 1위', score:96,
-     desc:'한국 직장인·학생이 가장 먼저 열어보는 LLM. 기획서 초안부터 보고서까지 다재다능합니다.',
-     features:['GPT-5.6 Sol/Terra/Luna','Code Interpreter','DALL-E 3','Memory'],
+    {name:'ChatGPT', maker:'OpenAI · 미국', tag:'GPT-6 Astra', scale:'한국 점유율 1위', score:96,
+     desc:'9/3 GPT-6 Astra 출시. 한국 직장인·학생이 가장 먼저 열어보는 LLM. 1M ctx + OSWorld 72.6%로 문서·자동화 품질 급상승.',
+     features:['GPT-6 Astra (1M ctx)','Code Interpreter','DALL-E 3','Memory'],
      pricing:'무료 · Plus $20 · Pro $200', founded:'2022',
      users:['한국 직장인','학생','연구자'],
-     why:'한국에서도 <b>가장 광범위한 사용자 기반</b>. 국내 직장인·학생의 사실상 표준.',
+     why:'한국에서도 <b>가장 광범위한 사용자 기반</b>. GPT-6 Astra 순차 롤아웃으로 국내 직장인·학생의 사실상 표준 재확인.',
      url:'https://chatgpt.com'},
-    {name:'Claude', maker:'Anthropic · 미국', tag:'Opus 5', scale:'전문가 선호', score:90,
-     desc:'긴 자료 처리와 글쓰기 품질이 압도적. Opus 5(1M ctx) + 5단계 effort 토글로 한국 변호사·연구자·컨설턴트의 메인 LLM.',
-     features:['Opus 5 (1M ctx)','5-level effort','Artifacts','MCP'],
+    {name:'Claude', maker:'Anthropic · 미국', tag:'Fable 5.1', scale:'전문가 선호', score:91,
+     desc:'긴 자료 처리와 글쓰기 품질이 압도적. 9/1 Fable 5.1(1M ctx) + 캐시 리드 75% 인하로 한국 변호사·연구자·컨설턴트의 장기 세션 원가가 급감.',
+     features:['Fable 5.1 (1M ctx)','캐시 75% 인하','Artifacts','MCP'],
      pricing:'무료 · Pro $20 · Max $200', founded:'2021',
      users:['로펌','컨설팅','연구자'],
-     why:'<b>긴 한국어 문서 처리</b>가 ChatGPT보다 자연스러움. Opus 5 = Fable 5급 지능을 절반 가격에.',
+     why:'<b>긴 한국어 문서 처리</b>가 ChatGPT보다 자연스러움. Fable 5.1 + 캐시 75% 인하로 원가 급감.',
      url:'https://claude.ai'},
     {name:'뤼튼 (Wrtn)', maker:'뤼튼테크놀로지스 · 한국', tag:'Korean AI', scale:'ARR $100M · 700만+', score:82,
      desc:'한국 토종 올인원 AI 챗봇. 글쓰기·검색·캐릭터 대화까지 한국어에 최적화. 스토리 서비스 "크랙"이 일본까지 확장 중.',
-     features:['한국어 특화','GPT-5.6 탑재','크랙(스토리)','이미지 생성'],
+     features:['한국어 특화','GPT-6 탑재','크랙(스토리)','이미지 생성'],
      pricing:'무료', founded:'2021',
      users:['한국 학생','일반 사용자','직장인'],
      why:'<b>한국어 AI 1위 + ARR $100M 돌파</b>. 크랙(스토리 서비스)·일본 진출·2028 IPO 목표.',
@@ -837,12 +837,12 @@ const GLOBAL_DATA = [
   {
     kr:'코딩 / 개발', en:'Coding & Engineering',
     tools:[
-      {name:'Claude Code', maker:'Anthropic · 미국', tag:'Agentic CLI', scale:'$3.5B run rate', score:96,
-       desc:'터미널에서 작동하는 코딩 에이전트. Opus 5 + 5단계 effort 토글로 멀티파일 리팩터링·테스트·PR 생성까지 한 흐름으로 처리.',
-       features:['CLI Agent','MCP 통합','Opus 5','5-level effort'],
+      {name:'Claude Code', maker:'Anthropic · 미국', tag:'Fable 5.1', scale:'$3.5B run rate', score:97,
+       desc:'터미널에서 작동하는 코딩 에이전트. 9/1 Fable 5.1 탑재로 Terminal-Bench-Science 52.6% 기록. 캐시 리드 75% 인하로 장기 세션 원가가 급감.',
+       features:['Fable 5.1 (1M ctx)','캐시 75% 인하','MCP','5-level effort'],
        pricing:'Pro $20/월 · Max $200/월', founded:'2025',
        users:['Stripe','Replit','Vercel','Datadog'],
-       why:'<b>Opus 5 (1M ctx) + 5단계 effort 토글</b>로 대형 코드베이스 처리력 재상승. JetBrains 서베이 최애 46%.',
+       why:'<b>Fable 5.1 + 캐시 75% 인하</b>로 대형 코드베이스·장기 에이전트 세션 비용이 뚝 떨어짐. JetBrains 서베이 최애 46%.',
        url:'https://claude.com/claude-code'},
       {name:'Cursor', maker:'SpaceXAI (구 Anysphere) · 미국', tag:'AI IDE', scale:'SpaceX $60B 인수 완료', score:94,
        desc:'VS Code 기반의 AI 에디터. 8/14 SpaceX $60B 인수 클로징 · Colossus 슈퍼컴퓨터·Grok 통합으로 SpaceXAI 산하 편입. 자동완성·에이전트 모드 여전히 IDE 표준.',
@@ -851,9 +851,9 @@ const GLOBAL_DATA = [
        users:['OpenAI','Stripe','Shopify','Perplexity'],
        why:'AI IDE <b>점유율 1위</b> · ARR $4B, <b>SpaceX $60B 인수 8/14 클로징</b>(사상 최대 스타트업 인수). Fortune 500 60%+ 사용.',
        url:'https://cursor.com'},
-      {name:'GitHub Copilot', maker:'GitHub · 미국', tag:'Inline', scale:'20M+ users · 51% 점유', score:85,
-       desc:'가장 광범위하게 쓰이는 인라인 자동완성. Model Picker에 Claude/Gemini 등 다중 프론티어 모델까지 선택 가능.',
-       features:['Inline Suggest','Chat','PR Review','Model Picker'],
+      {name:'GitHub Copilot', maker:'GitHub · 미국', tag:'Model Picker', scale:'20M+ users · 51% 점유', score:84,
+       desc:'가장 광범위하게 쓰이는 인라인 자동완성. 9/1 구형 6종(Opus 4.5/4.6, Sonnet 4.5/4.6, Gemini 3.1 Pro, Raptor mini) 일괄 은퇴 · Claude Sonnet 5·Opus 5·Haiku 4.5·Opus 4.8로 라인업 정돈.',
+       features:['Sonnet 5 / Opus 5','Claude Coding Agent','PR Review','MAI-Code-1-Flash'],
        pricing:'$10/월 · Business $19', founded:'2021',
        users:['Microsoft','Accenture','Coca-Cola','BMW'],
        why:'<b>Fortune 500 80%+ 도입</b>. Cursor·Claude Code에 점유율 잠식(67%→51%) 중이나 엔터프라이즈 저변은 여전히 압도적.',
@@ -863,19 +863,19 @@ const GLOBAL_DATA = [
   {
     kr:'기획서 / 문서', en:'Documents & Reports',
     tools:[
-      {name:'ChatGPT', maker:'OpenAI · 미국', tag:'All-round', scale:'1B+ WAU', score:99,
-       desc:'기획서 초안부터 리서치, 표·다이어그램 생성까지. 8/7부터 GPT-5.6 Luna가 무료·Go 티어에서 무제한 텍스트 채팅으로 전환.',
-       features:['GPT-5.6 Sol/Terra/Luna','Luna 무제한(무료)','Code Interpreter','Memory'],
+      {name:'ChatGPT', maker:'OpenAI · 미국', tag:'GPT-6 Astra', scale:'1B+ WAU', score:99,
+       desc:'9/3 GPT-6 Astra 출시로 세대 교체. 1M ctx · FrontierMath T4 97.6% · ARC-AGI-3 99.9% 포화. OSWorld 2.0에서 GPT-5.6 대비 47% 빠른 컴퓨터·브라우저 사용까지.',
+       features:['GPT-6 Astra (1M ctx)','OSWorld 72.6%','Code Interpreter','Memory'],
        pricing:'무료 · Plus $20 · Pro $200', founded:'2022',
        users:['전 세계 직장인','학생','연구자'],
-       why:'<b>주간 활성 사용자 10억 명</b> 돌파. 인류 역사상 가장 빠르게 성장한 소비자 제품.',
+       why:'<b>GPT-6 Astra로 프런티어 재탈환</b> · 주간 활성 10억 돌파. Plus/Pro/Business에 순차 롤아웃 중.',
        url:'https://chatgpt.com'},
-      {name:'Claude', maker:'Anthropic · 미국', tag:'Opus 5', scale:'$965B · S-1 제출', score:93,
-       desc:'긴 자료를 통째로 읽고 일관성 있는 보고서를 써냅니다. Opus 5(1M ctx)와 5단계 effort 토글로 전략·법률·학술 문서에서 전문가층 압도적 선호.',
-       features:['Opus 5 (1M ctx)','5-level effort','Artifacts','MCP'],
+      {name:'Claude', maker:'Anthropic · 미국', tag:'Fable 5.1', scale:'$965B · S-1 제출', score:94,
+       desc:'9/1 Fable 5.1 / Mythos 5.1 출시. 1M ctx + 128K max output에 캐시 리드 요금 75% 인하. Terminal-Bench-Science 52.6%로 도구 사용·장기 에이전트 품질 정상급.',
+       features:['Fable 5.1 (1M ctx)','캐시 75% 인하','Artifacts','MCP'],
        pricing:'무료 · Pro $20 · Max $200', founded:'2021',
        users:['DoorDash','Bridgewater','Pfizer','LexisNexis'],
-       why:'<b>Series H $965B 가치</b>로 OpenAI 추월 · S-1 초안 제출로 IPO 시동. Opus 5 = Fable 5급 지능을 절반 가격.',
+       why:'<b>Fable 5.1 · 캐시 리드 $1→$0.25</b> (75% 인하)로 장기 에이전트 원가 급감. $965B 가치 · S-1 초안 제출로 IPO 시동.',
        url:'https://claude.ai'},
       {name:'Notion AI', maker:'Notion · 미국', tag:'Custom Agents', scale:'100M+ users', score:83,
        desc:'노션 문서·DB·노트 안에 통합된 AI. 8월 신규 Custom Agent 트리거로 회의록 완료 후 트래커 자동 갱신·Slack 리캡·티켓 발행까지 자동화.',
@@ -967,12 +967,12 @@ const GLOBAL_DATA = [
   {
     kr:'검색 / 리서치', en:'Search & Research',
     tools:[
-      {name:'Perplexity', maker:'Perplexity · 미국', tag:'AI Search', scale:'45M MAU · $22.6B', score:95,
-       desc:'출처 인용 + 정확도로 AI 검색의 표준. Comet 브라우저 무료화 + Chrome $34.5B 인수 제안까지, 검색 시장 재편 주도.',
-       features:['Pro Search','Comet Browser','Spaces','Sources'],
+      {name:'Perplexity', maker:'Perplexity · 미국', tag:'Comet', scale:'45M MAU · $22.6B', score:95,
+       desc:'출처 인용 + 정확도로 AI 검색의 표준. 9월 초 Grok 4.6·GPT-5.6 Terra까지 프런티어 모델 로스터 확대. Comet 브라우저 + Chrome $34.5B 인수 제안으로 검색 판도 재편 시도 중.',
+       features:['Grok 4.6 · GPT-5.6 Terra','Comet Browser','Spaces','Sources'],
        pricing:'무료 · Pro $20/월', founded:'2022',
        users:['연구자','기자','학생'],
-       why:'<b>출처 인용 + 정확도</b>로 AI 검색의 표준. Comet 브라우저 + Chrome $34.5B 인수 제안으로 검색 판도 재편 시도.',
+       why:'<b>출처 인용 + 정확도</b>로 AI 검색의 표준. Grok 4.6·Terra까지 붙여 프런티어 모델 풀이 가장 넓음.',
        url:'https://www.perplexity.ai'},
       {name:'ChatGPT Search', maker:'OpenAI · 미국', tag:'Web', scale:'1B WAU', score:88,
        desc:'ChatGPT 안에서 즉시 웹 검색. 가장 넓은 사용자 기반과 통합 환경이 강점.',
@@ -1097,12 +1097,12 @@ const GLOBAL_DATA = [
   {
     kr:'TTS / 음성', en:'Voice & Speech',
     tools:[
-      {name:'ElevenLabs', maker:'ElevenLabs · 영국', tag:'Studio', scale:'$11B 가치', score:97,
-       desc:'30개국 이상 언어, 풍부한 감정 표현. Music v2까지 합류해 음성 + 음악을 한 스튜디오에서.',
-       features:['30+ 언어','Voice Clone','Music v2','Dubbing'],
+      {name:'ElevenLabs', maker:'ElevenLabs · 영국', tag:'ElevenAgents', scale:'$11B 가치', score:97,
+       desc:'30개국 이상 언어 + 풍부한 감정 표현 + Music v2. 9월 CLI v1.0.0 정식 출시 + ElevenAgents Procedures GA로 음성 에이전트 배포·CI 파이프라인 표준화.',
+       features:['30+ 언어','Voice Clone','Music v2','ElevenAgents · CLI v1'],
        pricing:'무료 · Creator $5/월~', founded:'2022',
        users:['HBO','Disney','NYT','Audible'],
-       why:'<b>HBO·Disney·NYT</b> 등 미디어 표준. Music v2 + 요금 50% 인하로 확장 중.',
+       why:'<b>HBO·Disney·NYT</b> 등 미디어 표준. CLI v1 + ElevenAgents로 개발자·기업 워크플로까지 흡수.',
        url:'https://elevenlabs.io'},
       {name:'Murf', maker:'Murf · 인도/미국', tag:'Pro', scale:'4M+ users', score:74,
        desc:'기업·교육 콘텐츠에 적합한 깔끔한 보이스. 워크스페이스 협업 기능이 강점입니다.',
