@@ -565,8 +565,8 @@
     </div>
 
     <div class="sidebar-foot">
-      <div class="row"><span>Updated</span><b id="sidebarUpdated">09 / 28</b></div>
-      <div class="row"><span>Next sync</span><b id="sidebarNextSync">10 / 05</b></div>
+      <div class="row"><span>Updated</span><b id="sidebarUpdated">10 / 05</b></div>
+      <div class="row"><span>Next sync</span><b id="sidebarNextSync">10 / 12</b></div>
       <div class="row"><span>Source</span><b>11 sites</b></div>
     </div>
   </aside>
@@ -623,8 +623,8 @@
         </div>
         <div class="kpi">
           <div class="lab"><span class="ic"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.39 0 4.68.94 6.36 2.64L21 8"/><polyline points="21 3 21 8 16 8"/></svg></span>마지막 업데이트</div>
-          <div class="v" style="font-size:24px" id="kpiUpdated">2026 · 09 · 28</div>
-          <div class="delta flat" id="kpiUpdatedDelta">Claude 자동 큐레이션 · 1주 주기 · 다음 10/5</div>
+          <div class="v" style="font-size:24px" id="kpiUpdated">2026 · 10 · 05</div>
+          <div class="delta flat" id="kpiUpdatedDelta">Claude 자동 큐레이션 · 1주 주기 · 다음 10/12</div>
           <svg class="spark" width="80" height="28" viewBox="0 0 80 28"><polyline fill="none" stroke="#a855f7" stroke-width="1.6" points="0,14 10,12 20,16 30,10 40,14 50,8 60,12 70,6 80,10"/></svg>
         </div>
       </div>
@@ -671,19 +671,19 @@ const C = ['--c1','--c2','--c3','--c4','--c5','--c6','--c7','--c8','--c9','--c10
 
 const KR_OVERRIDES = {
   '기획서 / 문서': [
-    {name:'ChatGPT', maker:'OpenAI · 미국', tag:'GPT-6 Sol/Luna', scale:'한국 점유율 1위', score:96,
-     desc:'한국 직장인·학생이 가장 먼저 열어보는 LLM. GPT-6 Sol/Luna 세대 진입으로 기획서 초안부터 보고서까지 다재다능함 유지.',
-     features:['GPT-6 Sol/Luna','Code Interpreter','DALL-E 3','Memory'],
-     pricing:'무료 · Plus $20 · Pro $200', founded:'2022',
+    {name:'ChatGPT', maker:'OpenAI · 미국', tag:'GPT-6.1 Sol · DevDay 2026', scale:'한국 점유율 1위', score:96,
+     desc:'한국 직장인·학생이 가장 먼저 열어보는 LLM. 9/29 DevDay 2026에서 GPT-6.1 Sol 공개(Astra 수준 성능·1/5 가격), $500 Pro Max 플랜까지 추가로 기획~보고서 전 범위 커버.',
+     features:['GPT-6.1 Sol (1.05M ctx)','캐시 리드 -95%','Code Interpreter','Memory'],
+     pricing:'무료 · Plus $20 · Pro $200 · Pro Max $500', founded:'2022',
      users:['한국 직장인','학생','연구자'],
-     why:'한국에서도 <b>가장 광범위한 사용자 기반</b>. 국내 직장인·학생의 사실상 표준.',
+     why:'한국에서도 <b>가장 광범위한 사용자 기반</b> + GPT-6.1 Sol 공개로 성능/가격 재장악. 국내 직장인·학생의 사실상 표준.',
      url:'https://chatgpt.com'},
-    {name:'Claude', maker:'Anthropic · 미국', tag:'Opus 5.5', scale:'전문가 선호 + 10월 상장', score:92,
-     desc:'긴 자료 처리와 글쓰기 품질이 압도적. 9/22 Opus 5.5 기본 승격으로 40% 저렴·30% 빠른 응답, 한국 변호사·연구자·컨설턴트의 메인 LLM 지위 유지.',
-     features:['Opus 5.5 (1M ctx)','5-level effort','Artifacts','MCP'],
+    {name:'Claude', maker:'Anthropic · 미국', tag:'Sonnet 5.5 · 10월 $2T IPO', scale:'전문가 선호 + 10월 상장', score:93,
+     desc:'긴 자료 처리와 글쓰기 품질이 압도적. 9/22 Opus 5.5에 이어 9/28 Sonnet 5.5(30% 빠름·30% 저렴, 가격 동결)까지 추가, 한국 변호사·연구자·컨설턴트의 일상 LLM 지위 유지.',
+     features:['Opus 5.5 + Sonnet 5.5','1M ctx','Artifacts','MCP'],
      pricing:'무료 · Pro $20 · Max $200', founded:'2021',
      users:['로펌','컨설팅','연구자'],
-     why:'<b>긴 한국어 문서 처리</b>가 ChatGPT보다 자연스러움. Opus 5.5 = Fable 5급을 40% 인하 · 10월 상장 예정.',
+     why:'<b>긴 한국어 문서 처리</b>가 ChatGPT보다 자연스러움. 10월 <b>$2T IPO</b> 목표 · Sonnet 5.5로 일상 사용 비용까지 하락.',
      url:'https://claude.ai'},
     {name:'뤼튼 (Wrtn)', maker:'뤼튼테크놀로지스 · 한국', tag:'IPO 주관사 확정', scale:'1조원+ 유니콘', score:85,
      desc:'한국 토종 올인원 AI 챗봇. 9/23 미래에셋증권을 상장 대표주관사로 선정(NH투자증권 공동), 2027년 예비심사 청구 목표. 8월 Series C 1,000억원 완료로 한국 첫 AI 서비스 유니콘.',
@@ -837,45 +837,45 @@ const GLOBAL_DATA = [
   {
     kr:'코딩 / 개발', en:'Coding & Engineering',
     tools:[
-      {name:'Claude Code', maker:'Anthropic · 미국', tag:'Opus 5.5', scale:'$3.5B run rate', score:97,
-       desc:'터미널에서 작동하는 코딩 에이전트. 9/22 Opus 5.5가 기본 승격(1M ctx·5단계 effort)으로 40% 저렴·30% 빠른 컨텍스트 캐싱까지. v2.1.283에서 모델 허용목록 관리 기능 추가.',
-       features:['Opus 5.5 Default','1M ctx','MCP 통합','Model Allow-list'],
-       pricing:'Pro $20/월 · Max $200/월 · API $4/$20 MTok', founded:'2025',
+      {name:'Claude Code', maker:'Anthropic · 미국', tag:'Opus 5.5 + Sonnet 5.5', scale:'$3.5B run rate', score:97,
+       desc:'터미널에서 작동하는 코딩 에이전트. 9/22 Opus 5.5 기본 승격에 이어 9/28 Sonnet 5.5가 출시(30% 빠름·30% 저렴, Sonnet 5 가격 유지)되어 일상적 코딩은 중저가·대형 리팩터링은 Opus로 분리 쓰기 표준화.',
+       features:['Opus 5.5 + Sonnet 5.5','1M ctx','MCP 통합','Model Allow-list'],
+       pricing:'Pro $20/월 · Max $200/월 · API $2/$10 (Sonnet) · $4/$20 (Opus)', founded:'2025',
        users:['Stripe','Replit','Vercel','Datadog'],
-       why:'<b>Opus 5.5 기본 승격 + 캐시 리드 -60% 인하</b>로 대형 코드베이스 실사용 비용 급락. JetBrains 서베이 최애 46%.',
+       why:'<b>Opus 5.5 + Sonnet 5.5 듀얼 라인업</b>으로 성능/비용 양 축 모두 1위. Sonnet 5.5는 1년간 조기 폐기 금지 선언.',
        url:'https://claude.com/claude-code'},
-      {name:'Cursor', maker:'SpaceXAI (구 Anysphere) · 미국', tag:'Rollouts + SecReview', scale:'SpaceX $60B 인수 완료', score:94,
-       desc:'VS Code 기반의 AI 에디터. 9/23 Rollouts(배포 헬스)·Security Review 봇을 Team/Enterprise에 배포, 에이전트 하네스 개선으로 토큰 비용 7% 절감. SpaceXAI 산하 편입 후 Grok 통합 유지.',
-       features:['Rollouts Bot','Security Review','Agent Mode','Grok 통합'],
+      {name:'Cursor', maker:'SpaceXAI (구 Anysphere) · 미국', tag:'Projects + Grok 4.7', scale:'SpaceX $60B 인수 완료', score:95,
+       desc:'VS Code 기반의 AI 에디터. 9/10 Cursor Projects 공개(코디네이터 에이전트가 작업 계획→병렬 하위 에이전트 위임)와 9/2 Self-hosted Machines(코드·시크릿 사내망 체류) 발표. 세션당 토큰 46.9% 절감 + Grok 4.7 통합.',
+       features:['Projects (Coordinator)','Self-hosted Machines','Grok 4.7','토큰 -46.9%'],
        pricing:'무료 · Pro $20/월', founded:'2022',
        users:['OpenAI','Stripe','Shopify','Perplexity'],
-       why:'AI IDE <b>점유율 1위</b> · ARR $4B, SpaceX $60B 인수 클로징(사상 최대 스타트업 인수). <b>9/23 Rollouts + Security Review 봇</b>으로 엔터프라이즈 락인 강화.',
+       why:'AI IDE <b>점유율 1위</b> · ARR $4B. <b>9/10 Projects 코디네이터 에이전트</b>로 대형 작업 병렬화, 토큰 효율 46.9% 개선으로 비용 우위까지 확보.',
        url:'https://cursor.com'},
       {name:'GitHub Copilot', maker:'GitHub · 미국', tag:'Multi-frontier', scale:'20M+ users · 51% 점유', score:85,
-       desc:'가장 광범위하게 쓰이는 인라인 자동완성. 9/21 주간 릴리스로 Opus 5.5·GPT-6 Sol/Luna·Grok 4.7가 Model Picker에 합류, 로컬 샌드박싱까지 표준화.',
-       features:['Opus 5.5 + GPT-6 + Grok 4.7','Local Sandbox','PR Review','Inline Suggest'],
+       desc:'가장 광범위하게 쓰이는 인라인 자동완성. 9/21 주간 릴리스 이후 Model Picker에 Opus 5.5·Sonnet 5.5·GPT-6.1 Sol·Grok 4.7가 합류, Teams Facilitator로 회의 중 질문도 자동 답변.',
+       features:['Opus 5.5 + Sonnet 5.5 + GPT-6.1 Sol + Grok 4.7','Local Sandbox','PR Review','Inline Suggest'],
        pricing:'$10/월 · Business $19', founded:'2021',
        users:['Microsoft','Accenture','Coca-Cola','BMW'],
-       why:'<b>Fortune 500 80%+ 도입</b>. Cursor·Claude Code에 점유율 잠식(67%→51%) 중이나 <b>다중 프론티어 모델 스위칭</b>으로 엔터프라이즈 저변은 여전히 압도적.',
+       why:'<b>Fortune 500 80%+ 도입</b>. Cursor·Claude Code에 점유율 잠식 중이나 <b>GPT-6.1 Sol/Sonnet 5.5 합류로 다중 프론티어 모델 스위칭</b> 체계는 여전히 압도적.',
        url:'https://github.com/features/copilot'},
     ]
   },
   {
     kr:'기획서 / 문서', en:'Documents & Reports',
     tools:[
-      {name:'ChatGPT', maker:'OpenAI · 미국', tag:'GPT-6 Sol/Luna', scale:'1B+ WAU · $1.5T', score:99,
-       desc:'기획서 초안부터 리서치, 표·다이어그램 생성까지. GPT-6 Sol/Luna 라인업으로 세대 교체, Luna는 무료·Go 티어 무제한 유지. 2026 IPO는 보류·가치 $1.5T 협상.',
-       features:['GPT-6 Sol/Luna','Luna 무제한(무료)','Code Interpreter','Memory'],
-       pricing:'무료 · Plus $20 · Pro $200', founded:'2022',
+      {name:'ChatGPT', maker:'OpenAI · 미국', tag:'GPT-6.1 Sol · DevDay 2026', scale:'1B+ WAU · $500 Pro Max', score:99,
+       desc:'기획서·리서치·표/다이어그램까지. 9/29 DevDay 2026에서 GPT-6.1 Sol 공개(1.05M ctx·Astra 성능 1/5 가격)와 $500 Pro Max 플랜 발표. GPT-6.1 Astra는 안전성 이슈로 개발 보류.',
+       features:['GPT-6.1 Sol (1.05M ctx)','캐시 리드 -95%','Dots 자동화','$500 Pro Max'],
+       pricing:'무료 · Plus $20 · Pro $200 · Pro Max $500', founded:'2022',
        users:['전 세계 직장인','학생','연구자'],
-       why:'<b>주간 활성 사용자 10억 명</b> 돌파. GPT-6 세대 진입으로 컨슈머 표준 유지.',
+       why:'<b>주간 활성 사용자 10억 명 + GPT-6.1 Sol(9/29) 공개</b>로 성능/가격 양 축 재장악. Astra 중단으로 안전성 논쟁 중이나 컨슈머 표준은 공고.',
        url:'https://chatgpt.com'},
-      {name:'Claude', maker:'Anthropic · 미국', tag:'Opus 5.5', scale:'S-1 확정 · 10월 상장', score:95,
-       desc:'긴 자료를 통째로 읽고 일관성 있는 보고서를 써냅니다. 9/22 Opus 5.5가 기본 승격, 40% 저렴·30% 빠른 응답으로 전략·법률·학술 문서 전문가층 선호 확대.',
-       features:['Opus 5.5 (1M ctx)','5-level effort','Artifacts','MCP'],
-       pricing:'무료 · Pro $20 · Max $200 · API $4/$20 MTok', founded:'2021',
+      {name:'Claude', maker:'Anthropic · 미국', tag:'Sonnet 5.5 · 10월 $2T IPO', scale:'S-1 완료 · 10월 상장', score:96,
+       desc:'긴 자료 통독·일관성 있는 보고서의 표준. 9/22 Opus 5.5 승격에 이어 9/28 Sonnet 5.5 출시(30% 빠름·30% 저렴, 가격 동결)로 전략·법률·학술 문서 전문가층 확대.',
+       features:['Opus 5.5 + Sonnet 5.5','1M ctx','Artifacts','MCP'],
+       pricing:'무료 · Pro $20 · Max $200 · API $2/$10 (Sonnet)', founded:'2021',
        users:['DoorDash','Bridgewater','Pfizer','LexisNexis'],
-       why:'<b>S-1 확정 · 10월 상장 · $2T 밸류에이션 논의</b>. Opus 5.5로 지능·비용·속도 삼중 개선, Fable 5급을 절반 가격에 유지.',
+       why:'<b>10월 $2T IPO 목표(Morgan Stanley·Goldman·JPMorgan 공동주관)</b> · 사상 최대 IPO. Sonnet 5.5로 지능·비용·속도 재갱신, 1년 조기 폐기 금지 선언.',
        url:'https://claude.ai'},
       {name:'Notion AI', maker:'Notion · 미국', tag:'Custom Agents', scale:'100M+ users', score:83,
        desc:'노션 문서·DB·노트 안에 통합된 AI. 8월 신규 Custom Agent 트리거로 회의록 완료 후 트래커 자동 갱신·Slack 리캡·티켓 발행까지 자동화.',
@@ -915,12 +915,12 @@ const GLOBAL_DATA = [
   {
     kr:'엑셀 / 시트', en:'Spreadsheet & Excel',
     tools:[
-      {name:'Microsoft 365 Copilot', maker:'Microsoft · 미국', tag:'Native', scale:'20M+ 유료 시트', score:95,
-       desc:'엑셀에 기본 탑재된 AI. 시트를 읽고 차트·피벗·요약을 자동 생성하며 워크북 전체를 이해합니다.',
-       features:['Excel Native','Word/PPT 통합','기업 보안','Frontier Finance'],
+      {name:'Microsoft 365 Copilot', maker:'Microsoft · 미국', tag:'Grok + FinOps', scale:'20M+ 유료 시트', score:95,
+       desc:'엑셀 기본 탑재 AI. 9월 업데이트로 Model Picker에 Grok 합류 + 사용량 기반 과금·FinOps 컨트롤 추가. Teams Facilitator가 회의 중 미답변 질문도 자동 처리.',
+       features:['Excel Native','Grok 추가','FinOps 과금','Teams Facilitator'],
        pricing:'$30/월 (Office 365)', founded:'2023',
        users:['Goldman Sachs','삼성','Fortune 500'],
-       why:'<b>Fortune 500 90%+ 도입</b>. Office 환경의 사실상 표준.',
+       why:'<b>Fortune 500 90%+ 도입</b>. 9월 Grok 합류 + FinOps 컨트롤로 엔터프라이즈 비용 가시성 확보.',
        url:'https://www.microsoft.com/microsoft-365/copilot'},
       {name:'Numerous.ai', maker:'Numerous · 미국', tag:'Add-on', scale:'200K+ users', score:72,
        desc:'구글 시트·엑셀에 붙는 AI 함수. =AI() 한 줄로 분류·태깅·요약을 셀 단위로 일괄 처리.',
@@ -967,12 +967,12 @@ const GLOBAL_DATA = [
   {
     kr:'검색 / 리서치', en:'Search & Research',
     tools:[
-      {name:'Perplexity', maker:'Perplexity · 미국', tag:'AI Search', scale:'45M MAU · $22.6B', score:95,
-       desc:'출처 인용 + 정확도로 AI 검색의 표준. Comet 브라우저 무료화 + Chrome $34.5B 인수 제안까지, 검색 시장 재편 주도.',
-       features:['Pro Search','Comet Browser','Spaces','Sources'],
+      {name:'Perplexity', maker:'Perplexity · 미국', tag:'Comet Multi-tab', scale:'45M MAU · $22.6B', score:95,
+       desc:'출처 인용 + 정확도로 AI 검색의 표준. Comet Assistant 업데이트로 다탭·다사이트 병렬 워크플로우 + 23% 성능 향상, Privacy Snapshot 위젯·에이전트 권한 세분화도 추가.',
+       features:['Comet Multi-tab','Privacy Snapshot','Pro Search','Spaces'],
        pricing:'무료 · Pro $20/월', founded:'2022',
        users:['연구자','기자','학생'],
-       why:'<b>출처 인용 + 정확도</b>로 AI 검색의 표준. Comet 브라우저 + Chrome $34.5B 인수 제안으로 검색 판도 재편 시도.',
+       why:'<b>출처 인용 + 정확도</b>로 AI 검색의 표준. Comet 멀티탭 에이전트 + 프라이버시 컨트롤로 브라우저 AI 1위 지위 강화.',
        url:'https://www.perplexity.ai'},
       {name:'ChatGPT Search', maker:'OpenAI · 미국', tag:'Web', scale:'1B WAU', score:88,
        desc:'ChatGPT 안에서 즉시 웹 검색. 가장 넓은 사용자 기반과 통합 환경이 강점.',
@@ -1026,12 +1026,12 @@ const GLOBAL_DATA = [
        users:['학생','SMB','마케터','교사'],
        why:'<b>월 2.2억 명</b>이 쓰는 그래픽 도구. 비전공자 디자인 1위.',
        url:'https://www.canva.com/ai/'},
-      {name:'Figma Make', maker:'Figma · 미국', tag:'Native', scale:'13M users', score:93,
-       desc:'피그마 안에 들어온 AI. 7/30 업데이트로 요소 선택→속성 패널 편집·in-context 주석까지 지원. 브리프 한 줄에서 UI·컴포넌트·코드까지.',
-       features:['Visual Editing','Annotations','Code Export','Nested Folders'],
+      {name:'Figma Make', maker:'Figma · 미국', tag:'Vertical Wrap', scale:'13M users', score:93,
+       desc:'피그마 안에 들어온 AI. 10월 업데이트로 Auto Layout에 Vertical Wrap(CSS flexbox 멀티컬럼 대응) 추가, 폴더 미리보기·중복 복제까지 지원. Visual Editing + 주석 프롬프트 유지.',
+       features:['Vertical Wrap','Folder Preview','Visual Editing','Code Export'],
        pricing:'Figma Pro $15/월~', founded:'2012',
        users:['Microsoft','Uber','Airbnb','삼성'],
-       why:'<b>Visual Editing + 주석 프롬프트</b>로 디자인↔코드 왕복 마찰 최소화. 전 세계 디자이너 표준의 AI.',
+       why:'<b>Vertical Wrap으로 반응형 멀티컬럼 네이티브 지원</b>. 디자인↔코드 왕복 마찰 최소화의 표준 유지.',
        url:'https://www.figma.com/make'},
       {name:'Framer AI', maker:'Framer · 네덜란드', tag:'Web', scale:'500K sites', score:78,
        desc:'프롬프트로 반응형 랜딩페이지를 즉시 배포. 빠른 마케팅 사이트에 가장 적합합니다.',
@@ -1123,12 +1123,12 @@ const GLOBAL_DATA = [
   {
     kr:'음악 / 노래 생성', en:'Music Generation',
     tools:[
-      {name:'Suno', maker:'Suno · 미국', tag:'v6', scale:'15M+ users', score:95,
-       desc:'9/9 v6 출시로 구세대 모델 전면 은퇴. Warner Music·BMG·Believe와 라이선싱 체결로 상업적 사용성 확보, 다만 9/18 Sony·UMG가 v6 학습 대상 문제로 추가 소송.',
-       features:['v6 (신 모델)','Warner/BMG 라이선스','Studio DAW','Voices'],
+      {name:'Suno', maker:'Suno · 미국', tag:'v6 + Speech Beta', scale:'15M+ users', score:95,
+       desc:'9/9 v6에 이어 Speech Beta 공개 — 보컬·내레이션·BGM을 한 트랙으로 생성하는 하이브리드 오디오 모델. Warner·BMG·Believe 라이선스에 Sony·UMG 소송은 계속 병행.',
+       features:['v6 + Speech Beta','Warner/BMG 라이선스','Studio DAW','Voices'],
        pricing:'무료 · Pro $8/월', founded:'2023',
-       users:['인디 뮤지션','TikTok 크리에이터'],
-       why:'<b>보컬 표현력·속도·기능 종합 1위</b>. v6 + 3개 메이저 레이블 라이선스로 정통성 확보, 소송 리스크와 병행 성장.',
+       users:['인디 뮤지션','TikTok 크리에이터','팟캐스터'],
+       why:'<b>Speech Beta로 음성+음악 통합 생성 1위</b>. 3개 메이저 레이블 라이선스로 정통성 확보, 소송 리스크와 병행 성장.',
        url:'https://suno.com'},
       {name:'Udio', maker:'Udio · 미국', tag:'Pro Audio', scale:'1M+ users', score:84,
        desc:'더 정교한 컨트롤 + 오디오 품질 정상급. 프로 뮤지션·프로듀서들이 선호합니다.',
@@ -1149,12 +1149,12 @@ const GLOBAL_DATA = [
   {
     kr:'캐릭터 / 일러스트', en:'Character & Concept',
     tools:[
-      {name:'Midjourney', maker:'Midjourney · 미국', tag:'v8.2', scale:'21M+ users', score:96,
-       desc:'아트 디렉션과 결의 통제력에서 정점. 7/24 v8.2가 기본으로 승격, 심미성·이미지 품질·Personalization이 크게 향상됐습니다.',
-       features:['v8.2 Default','HD 2K','Personalization','Niji'],
+      {name:'Midjourney', maker:'Midjourney · 미국', tag:'v8.2 + Style Preview', scale:'21M+ users', score:96,
+       desc:'아트 디렉션과 결의 통제력에서 정점. 10/1 Alpha 업데이트로 사이드바 Style Preview·Create 뷰 대형 미리보기·폴더별 기본 파라미터 추가. v8 전면 개편 로드맵 공개.',
+       features:['Style Preview','Folder Defaults','v8 Roadmap','Personalization'],
        pricing:'Basic $10/월~', founded:'2022',
        users:['광고 에이전시','영화 컨셉팀','일러스트레이터'],
-       why:'<b>아트 디렉션 1위</b>. v8.2 기본 승격 + Personalization 강화로 취향 학습 정확도 상승.',
+       why:'<b>아트 디렉션 1위</b>. 10/1 Style Preview로 생성 전 결과 예측 가능, v8 로드맵 공개로 차세대 교체 준비.',
        url:'https://www.midjourney.com'},
       {name:'Leonardo AI', maker:'Leonardo · 호주', tag:'Game', scale:'19M users', score:80,
        desc:'게임 에셋·캐릭터 시트에 특화. 학습된 스타일 모델을 빠르게 갈아끼울 수 있습니다.',
