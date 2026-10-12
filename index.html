@@ -565,8 +565,8 @@
     </div>
 
     <div class="sidebar-foot">
-      <div class="row"><span>Updated</span><b id="sidebarUpdated">09 / 28</b></div>
-      <div class="row"><span>Next sync</span><b id="sidebarNextSync">10 / 05</b></div>
+      <div class="row"><span>Updated</span><b id="sidebarUpdated">10 / 12</b></div>
+      <div class="row"><span>Next sync</span><b id="sidebarNextSync">10 / 19</b></div>
       <div class="row"><span>Source</span><b>11 sites</b></div>
     </div>
   </aside>
@@ -611,20 +611,20 @@
         </div>
         <div class="kpi">
           <div class="lab"><span class="ic"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>월간 활성 사용자(누적)</div>
-          <div class="v">2<small>B+</small></div>
-          <div class="delta"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M7 17l5-5 5 5"/></svg>+33% YoY</div>
+          <div class="v">2.5<small>B+</small></div>
+          <div class="delta"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M7 17l5-5 5 5"/></svg>+42% YoY</div>
           <svg class="spark" width="80" height="28" viewBox="0 0 80 28"><polyline fill="none" stroke="#5b6cff" stroke-width="1.6" points="0,24 10,22 20,20 30,18 40,14 50,12 60,8 70,6 80,3"/></svg>
         </div>
         <div class="kpi">
           <div class="lab"><span class="ic"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>이달의 1위</div>
           <div class="v" style="font-size:24px">ChatGPT</div>
-          <div class="delta flat">1B+ WAU · 종합 1위</div>
+          <div class="delta flat">1.2B+ WAU · DevDay 2026 20+ 발표</div>
           <svg class="spark" width="80" height="28" viewBox="0 0 80 28"><circle cx="68" cy="14" r="9" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/><text x="68" y="18" text-anchor="middle" font-size="10" font-weight="700" fill="#d97706">★</text></svg>
         </div>
         <div class="kpi">
           <div class="lab"><span class="ic"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.39 0 4.68.94 6.36 2.64L21 8"/><polyline points="21 3 21 8 16 8"/></svg></span>마지막 업데이트</div>
-          <div class="v" style="font-size:24px" id="kpiUpdated">2026 · 09 · 28</div>
-          <div class="delta flat" id="kpiUpdatedDelta">Claude 자동 큐레이션 · 1주 주기 · 다음 10/5</div>
+          <div class="v" style="font-size:24px" id="kpiUpdated">2026 · 10 · 12</div>
+          <div class="delta flat" id="kpiUpdatedDelta">Claude 자동 큐레이션 · 1주 주기 · 다음 10/19</div>
           <svg class="spark" width="80" height="28" viewBox="0 0 80 28"><polyline fill="none" stroke="#a855f7" stroke-width="1.6" points="0,14 10,12 20,16 30,10 40,14 50,8 60,12 70,6 80,10"/></svg>
         </div>
       </div>
@@ -671,19 +671,19 @@ const C = ['--c1','--c2','--c3','--c4','--c5','--c6','--c7','--c8','--c9','--c10
 
 const KR_OVERRIDES = {
   '기획서 / 문서': [
-    {name:'ChatGPT', maker:'OpenAI · 미국', tag:'GPT-6 Sol/Luna', scale:'한국 점유율 1위', score:96,
-     desc:'한국 직장인·학생이 가장 먼저 열어보는 LLM. GPT-6 Sol/Luna 세대 진입으로 기획서 초안부터 보고서까지 다재다능함 유지.',
-     features:['GPT-6 Sol/Luna','Code Interpreter','DALL-E 3','Memory'],
+    {name:'ChatGPT', maker:'OpenAI · 미국', tag:'DevDay 2026', scale:'한국 점유율 1위 · WAU 12억', score:97,
+     desc:'한국 직장인·학생이 가장 먼저 열어보는 LLM. 9/29 DevDay 2026에서 20+ 발표 · 공유 작업 표면으로 재정의, GPT-6 Sol/Luna 라인업으로 기획서·보고서 전부 커버.',
+     features:['DevDay 2026','GPT-6 Sol/Luna','Codex Security Cloud','Memory'],
      pricing:'무료 · Plus $20 · Pro $200', founded:'2022',
      users:['한국 직장인','학생','연구자'],
-     why:'한국에서도 <b>가장 광범위한 사용자 기반</b>. 국내 직장인·학생의 사실상 표준.',
+     why:'한국에서도 <b>가장 광범위한 사용자 기반</b>. WAU 12억 돌파 + 공유 작업 표면 전환으로 국내 사실상 표준 지위 강화.',
      url:'https://chatgpt.com'},
-    {name:'Claude', maker:'Anthropic · 미국', tag:'Opus 5.5', scale:'전문가 선호 + 10월 상장', score:92,
-     desc:'긴 자료 처리와 글쓰기 품질이 압도적. 9/22 Opus 5.5 기본 승격으로 40% 저렴·30% 빠른 응답, 한국 변호사·연구자·컨설턴트의 메인 LLM 지위 유지.',
+    {name:'Claude', maker:'Anthropic · 미국', tag:'IPO 임박', scale:'10월 상장 임박 · $2T+', score:93,
+     desc:'긴 자료 처리와 글쓰기 품질이 압도적. 9/22 Opus 5.5 기본 승격(40% 저렴·30% 빠른 응답) + 10월 상장 임박($2–3T 전망)으로 한국 변호사·연구자·컨설턴트의 메인 LLM 지위 강화.',
      features:['Opus 5.5 (1M ctx)','5-level effort','Artifacts','MCP'],
      pricing:'무료 · Pro $20 · Max $200', founded:'2021',
      users:['로펌','컨설팅','연구자'],
-     why:'<b>긴 한국어 문서 처리</b>가 ChatGPT보다 자연스러움. Opus 5.5 = Fable 5급을 40% 인하 · 10월 상장 예정.',
+     why:'<b>긴 한국어 문서 처리</b>가 ChatGPT보다 자연스러움. Opus 5.5 + <b>10월 상장 임박 · $2–3T 밸류에이션</b>으로 신뢰도 급상승.',
      url:'https://claude.ai'},
     {name:'뤼튼 (Wrtn)', maker:'뤼튼테크놀로지스 · 한국', tag:'IPO 주관사 확정', scale:'1조원+ 유니콘', score:85,
      desc:'한국 토종 올인원 AI 챗봇. 9/23 미래에셋증권을 상장 대표주관사로 선정(NH투자증권 공동), 2027년 예비심사 청구 목표. 8월 Series C 1,000억원 완료로 한국 첫 AI 서비스 유니콘.',
@@ -863,19 +863,19 @@ const GLOBAL_DATA = [
   {
     kr:'기획서 / 문서', en:'Documents & Reports',
     tools:[
-      {name:'ChatGPT', maker:'OpenAI · 미국', tag:'GPT-6 Sol/Luna', scale:'1B+ WAU · $1.5T', score:99,
-       desc:'기획서 초안부터 리서치, 표·다이어그램 생성까지. GPT-6 Sol/Luna 라인업으로 세대 교체, Luna는 무료·Go 티어 무제한 유지. 2026 IPO는 보류·가치 $1.5T 협상.',
-       features:['GPT-6 Sol/Luna','Luna 무제한(무료)','Code Interpreter','Memory'],
+      {name:'ChatGPT', maker:'OpenAI · 미국', tag:'DevDay 2026', scale:'1.2B+ WAU · $1.5T', score:99,
+       desc:'9/29 DevDay 2026에서 20+ 발표 — ChatGPT를 사람·에이전트 공동 작업 표면으로 재정의, 서드파티 앱 네이티브 론칭, Codex Security Cloud, 상시 책무를 지는 에이전트. GPT-6 Sol/Luna 라인업 유지.',
+       features:['DevDay 2026 20+ 발표','GPT-6 Sol/Luna','Codex Security Cloud','에이전트 공동 작업'],
        pricing:'무료 · Plus $20 · Pro $200', founded:'2022',
        users:['전 세계 직장인','학생','연구자'],
-       why:'<b>주간 활성 사용자 10억 명</b> 돌파. GPT-6 세대 진입으로 컨슈머 표준 유지.',
+       why:'<b>주간 활성 사용자 12억 명</b> 돌파(9/29 DevDay 공식). ChatGPT를 공유 표면으로 재정의하며 컨슈머 표준 유지.',
        url:'https://chatgpt.com'},
-      {name:'Claude', maker:'Anthropic · 미국', tag:'Opus 5.5', scale:'S-1 확정 · 10월 상장', score:95,
-       desc:'긴 자료를 통째로 읽고 일관성 있는 보고서를 써냅니다. 9/22 Opus 5.5가 기본 승격, 40% 저렴·30% 빠른 응답으로 전략·법률·학술 문서 전문가층 선호 확대.',
+      {name:'Claude', maker:'Anthropic · 미국', tag:'IPO 임박', scale:'10월 상장 임박 · $2–3T 전망', score:96,
+       desc:'긴 자료를 통째로 읽고 일관성 있는 보고서를 써냅니다. 9/22 Opus 5.5 기본 승격 유지(40% 저렴·30% 빠른 응답). 투자자 과반이 Q3 실적 반영 후 10월 상장을 전망, $2T 목표·일부 $3T까지 전망.',
        features:['Opus 5.5 (1M ctx)','5-level effort','Artifacts','MCP'],
        pricing:'무료 · Pro $20 · Max $200 · API $4/$20 MTok', founded:'2021',
        users:['DoorDash','Bridgewater','Pfizer','LexisNexis'],
-       why:'<b>S-1 확정 · 10월 상장 · $2T 밸류에이션 논의</b>. Opus 5.5로 지능·비용·속도 삼중 개선, Fable 5급을 절반 가격에 유지.',
+       why:'<b>S-1 제출 완료 · 10월 상장 임박 · $2–3T 밸류에이션</b>. 2026년 매출 $100–120B 전망, 사상 최대 테크 IPO 유력. Opus 5.5가 지능·비용·속도 삼중 개선.',
        url:'https://claude.ai'},
       {name:'Notion AI', maker:'Notion · 미국', tag:'Custom Agents', scale:'100M+ users', score:83,
        desc:'노션 문서·DB·노트 안에 통합된 AI. 8월 신규 Custom Agent 트리거로 회의록 완료 후 트래커 자동 갱신·Slack 리캡·티켓 발행까지 자동화.',
